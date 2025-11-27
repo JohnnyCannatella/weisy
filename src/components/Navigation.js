@@ -1,10 +1,13 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { twMerge } from "tailwind-merge"
+import { clsx } from "clsx"
 
 export default function Navigation() {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [activeHash, setActiveHash] = useState("");
 
     const navLinks = [
         { href: '#features', label: 'Funzionalità' },
@@ -12,6 +15,9 @@ export default function Navigation() {
         { href: '#pricing', label: 'Prezzi' },
         { href: '#stats', label: 'Numeri' },
     ];
+    function cn(...inputs) {
+        return twMerge(clsx(inputs))
+    }
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,6 +26,18 @@ export default function Navigation() {
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    useEffect(() => {
+        // inizializza hash attivo
+        setActiveHash(window.location.hash || "");
+
+        const handleHashChange = () => {
+            setActiveHash(window.location.hash || "");
+        };
+
+        window.addEventListener("hashchange", handleHashChange);
+        return () => window.removeEventListener("hashchange", handleHashChange);
     }, []);
 
     return (
@@ -49,15 +67,24 @@ export default function Navigation() {
                         {/* Desktop navigation */}
                         <div className="hidden md:flex flex-1 items-center justify-center">
                             <div className="flex items-center gap-10">
-                                {navLinks.map((link) => (
-                                    <a
-                                        key={link.href}
-                                        href={link.href}
-                                        className={`text-sm font-medium transition-colors duration-300 text-black`}
-                                    >
-                                        {link.label}
-                                    </a>
-                                ))}
+                                {navLinks.map((link) => {
+                                    const isActive = activeHash === link.href;
+
+                                    return (
+                                        <a
+                                            key={link.href}
+                                            href={link.href}
+                                            className={cn(
+                                                'flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-200',
+                                                isActive
+                                                    ? 'text-blue-600 bg-blue-50 rounded-full'
+                                                    : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50 rounded-lg'
+                                            )}
+                                        >
+                                            {link.label}
+                                        </a>
+                                    );
+                                })}
                             </div>
                         </div>
 
