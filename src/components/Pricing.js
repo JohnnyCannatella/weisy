@@ -1,12 +1,19 @@
+'use client';
+import { useState } from 'react';
+import { LIFETIME_CONFIG, getLifetimeStatus } from '@/config/lifetime';
+
 export default function Pricing() {
+    const [isAnnual, setIsAnnual] = useState(false);
+    const lifetimeStatus = getLifetimeStatus();
+
     const plans = [
         {
-            name: 'Starter',
+            name: 'Free',
             price: '€0',
-            period: '/mese',
-            description: 'Perfetto per iniziare.',
+            period: '',
+            description: 'Perfetto per iniziare a tracciare le tue finanze.',
             features: [
-                'Fino a 10 holdings',
+                'Fino a 5 holdings',
                 '2 conti bancari',
                 'Dashboard base',
                 'Net worth tracking',
@@ -14,125 +21,275 @@ export default function Pricing() {
             ],
             cta: 'Inizia gratis',
             featured: false,
+            type: 'free',
         },
-        {
-            name: 'Pro',
-            price: '€9',
-            period: '/mese',
-            description: 'Tutti gli strumenti per gestire seriamente il tuo patrimonio.',
-            badge: 'PIÙ POPOLARE',
+        // Lifetime plan - only show if available
+        ...(lifetimeStatus.isAvailable ? [{
+            name: 'Lifetime Founder',
+            price: '€149',
+            period: '',
+            originalPrice: '€299',
+            description: 'Accesso permanente alle funzionalità core.',
+            badge: 'EARLY BIRD',
+            limitedOffer: lifetimeStatus.message,
+            spotsRemaining: lifetimeStatus.remaining,
+            urgencyLevel: lifetimeStatus.urgencyLevel,
             features: [
                 'Holdings illimitati',
                 'Conti illimitati',
-                'Integrazione broker',
                 'FIRE tracker',
-                'Rebalancing alerts',
-                'Analytics avanzate',
+                'Cash flow analysis',
+                'Dashboard avanzata',
                 'Export PDF',
+                'Bug fixes e sicurezza lifetime',
+            ],
+            excludedFeatures: [
+                'No AI insights',
+                'No future features',
+                'No integrazioni automatiche',
+            ],
+            cta: 'Accesso lifetime',
+            featured: false,
+            type: 'lifetime',
+        }] : []),
+        {
+            name: 'Pro',
+            price: isAnnual ? '€99' : '€9.99',
+            period: isAnnual ? '/anno' : '/mese',
+            savings: isAnnual ? 'Risparmi €20/anno' : null,
+            description: 'Tutto il potere dell\'AI e funzionalità future.',
+            badge: 'PIÙ POPOLARE',
+            features: [
+                'Tutto in Lifetime',
+                '✨ AI insights e previsioni',
+                '✨ Automazione cash flow',
+                '✨ Integrazioni bancarie auto',
+                '✨ Rebalancing intelligente',
+                'Tutte le future features',
+                'Analytics avanzate AI-powered',
                 'Supporto prioritario',
             ],
             cta: 'Inizia ora',
             featured: true,
-        },
-        {
-            name: 'Enterprise',
-            price: 'Custom',
-            period: '',
-            description: 'Soluzioni su misura per team e aziende.',
-            features: [
-                'Tutto in Pro',
-                'Multi‑utente',
-                'API access',
-                'White‑label',
-                'Onboarding dedicato',
-                'SLA garantito',
-                'Custom integrations',
-            ],
-            cta: 'Parla con noi',
-            featured: false,
+            type: 'subscription',
         },
     ];
 
     return (
-        <section id="pricing" className="bg-white py-24 md:py-32">
+        <section id="pricing" className="bg-gradient-to-b from-zinc-50 via-white to-zinc-100 py-24 md:py-32">
             <div className="container-albert px-6 lg:px-20">
-                {/* Section header – stesso stile degli altri componenti */}
-                <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
-                    <h2 className="mb-4">
-                        Scegli il piano giusto
-                        <br />
-                        per il tuo denaro.
+                {/* Section header */}
+                <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 space-y-4">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 bg-white/80 backdrop-blur text-xs font-semibold text-zinc-700">
+                        Piani e prezzi
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900">
+                        Scegli il piano giusto per il tuo denaro.
                     </h2>
-                    <p>
-                        Inizia gratis e passa a un piano superiore solo quando ti serve.
-                        Nessun vincolo, puoi cancellare in qualsiasi momento.
+                    <p className="text-sm md:text-base text-zinc-600">
+                        Inizia gratis o blocca il prezzo founder. Tutti i piani parlano lo stesso linguaggio della dashboard.
                     </p>
                 </div>
 
-                {/* Pricing cards – Albert‑style */}
-                <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-7">
+                {/* Toggle Annual/Monthly */}
+                <div className="flex items-center justify-center gap-3 mb-8 md:mb-12">
+                    <span className={`text-sm font-medium transition-colors ${!isAnnual ? 'text-zinc-900' : 'text-zinc-500'}`}>
+                        Mensile
+                    </span>
+                    <button
+                        onClick={() => setIsAnnual(!isAnnual)}
+                        className="relative inline-flex h-8 w-14 items-center rounded-full bg-zinc-900 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
+                        role="switch"
+                        aria-checked={isAnnual}
+                    >
+                        <span
+                            className={`inline-block h-5 w-5 transform rounded-full bg-white transition-transform ${
+                                isAnnual ? 'translate-x-7' : 'translate-x-2'
+                            }`}
+                        />
+                    </button>
+                    <span className={`text-sm font-medium transition-colors ${isAnnual ? 'text-zinc-900' : 'text-zinc-500'}`}>
+                        Annuale
+                    </span>
+                    {isAnnual && (
+                        <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-800">
+                            Risparmi €20
+                        </span>
+                    )}
+                </div>
+
+                {/* Pricing cards */}
+                <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
                     {plans.map((plan) => (
                         <div
                             key={plan.name}
-                            className={`relative rounded-[32px] bg-white border border-border-color px-6 py-7 md:px-7 md:py-8 shadow-card-md transition-transform duration-200 ${
-                                plan.featured ? 'md:-translate-y-1 md:shadow-card-xl' : ''
+                            className={`relative flex flex-col h-full rounded-3xl border bg-white shadow-sm p-6 md:p-7 transition-all duration-200 ${
+                                plan.featured
+                                    ? 'border-zinc-900 shadow-lg ring-2 ring-zinc-900/10 md:-translate-y-1'
+                                    : plan.type === 'lifetime'
+                                        ? 'border-amber-300 bg-gradient-to-br from-amber-50/70 to-white'
+                                        : 'border-zinc-200'
                             }`}
                         >
-                            {/* Badge piano principale */}
-                            {plan.featured && (
+                            {plan.badge && (
                                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center rounded-full bg-black text-white px-4 py-1 text-[11px] font-semibold tracking-wide">
-                    {plan.badge}
-                  </span>
+                                    <span className="inline-flex items-center rounded-full px-4 py-1 text-[11px] font-semibold tracking-wide bg-zinc-900 text-white">
+                                        {plan.badge}
+                                    </span>
                                 </div>
                             )}
 
-                            {/* Header piano */}
-                            <div className="mb-6">
-                                <h3 className="text-base font-semibold text-primary-text mb-1">
-                                    {plan.name}
-                                </h3>
-                                <p className="text-sm text-dark-gray-1 mb-4">{plan.description}</p>
-                                <div className="flex items-baseline gap-1">
-                  <span className="text-3xl md:text-4xl font-semibold text-primary-text">
-                    {plan.price}
-                  </span>
-                                    {plan.period && (
-                                        <span className="text-xs text-dark-gray-1">{plan.period}</span>
+                            <div className="flex flex-col gap-5 h-full">
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between gap-2">
+                                        <div className="space-y-1">
+                                            <h3 className="text-base font-semibold text-zinc-900">{plan.name}</h3>
+                                            <p className="text-sm text-zinc-600">{plan.description}</p>
+                                        </div>
+                                        {plan.type === 'subscription' && (
+                                            <span className="inline-flex items-center rounded-full bg-zinc-100 px-2.5 py-1 text-[10px] font-semibold text-zinc-700">
+                                                Include AI
+                                            </span>
+                                        )}
+                                    </div>
+
+                                    {plan.limitedOffer && (
+                                        <div className="space-y-2">
+                                            <div className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium ${
+                                                plan.urgencyLevel === 'high'
+                                                    ? 'bg-red-100 text-red-900'
+                                                    : plan.urgencyLevel === 'medium'
+                                                    ? 'bg-orange-100 text-orange-900'
+                                                    : 'bg-amber-100 text-amber-900'
+                                            }`}>
+                                                <svg className="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                                                </svg>
+                                                {plan.limitedOffer}
+                                            </div>
+                                            {/* Progress bar */}
+                                            {plan.spotsRemaining !== undefined && (
+                                                <div className="w-full">
+                                                    <div className="h-1.5 w-full bg-zinc-200 rounded-full overflow-hidden">
+                                                        <div
+                                                            className={`h-full transition-all duration-500 ${
+                                                                plan.urgencyLevel === 'high'
+                                                                    ? 'bg-red-500'
+                                                                    : plan.urgencyLevel === 'medium'
+                                                                    ? 'bg-orange-500'
+                                                                    : 'bg-amber-500'
+                                                            }`}
+                                                            style={{ width: `${(plan.spotsRemaining / LIFETIME_CONFIG.total) * 100}%` }}
+                                                        />
+                                                    </div>
+                                                    <p className="mt-1 text-[10px] text-zinc-500">
+                                                        {LIFETIME_CONFIG.sold} venduti · {plan.spotsRemaining} rimasti
+                                                    </p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    )}
+
+                                    <div className="flex items-baseline gap-2">
+                                        {plan.originalPrice && (
+                                            <span className="text-sm text-zinc-400 line-through">
+                                                {plan.originalPrice}
+                                            </span>
+                                        )}
+                                        <span className="text-3xl md:text-4xl font-semibold text-zinc-900">
+                                            {plan.price}
+                                        </span>
+                                        {plan.period && (
+                                            <span className="text-xs text-zinc-500">{plan.period}</span>
+                                        )}
+                                    </div>
+                                    {plan.savings && (
+                                        <p className="text-xs font-medium text-green-700">
+                                            {plan.savings}
+                                        </p>
+                                    )}
+                                </div>
+
+                                <ul className="space-y-2.5">
+                                    {plan.features.map((feature) => (
+                                        <li key={feature} className="flex items-start gap-2">
+                                            <span className="mt-[2px] inline-flex h-4 w-4 items-center justify-center rounded-full bg-zinc-900 text-[10px] text-white shrink-0">
+                                                ✓
+                                            </span>
+                                            <span className="text-xs text-zinc-700">{feature}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+
+                                {plan.excludedFeatures && plan.excludedFeatures.length > 0 && (
+                                    <div className="border-t border-zinc-200 pt-4 space-y-2">
+                                        <p className="text-[10px] uppercase tracking-wide text-zinc-500 font-semibold">
+                                            Non incluso
+                                        </p>
+                                        <ul className="space-y-2.5">
+                                            {plan.excludedFeatures.map((feature) => (
+                                                <li key={feature} className="flex items-start gap-2">
+                                                    <span className="mt-[2px] inline-flex h-4 w-4 items-center justify-center rounded-full bg-zinc-200 text-[10px] text-zinc-500 shrink-0">
+                                                        ✕
+                                                    </span>
+                                                    <span className="text-xs text-zinc-500">{feature}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )}
+
+                                <div className="mt-auto">
+                                    <a
+                                        href="https://wealth-manager-gamma.vercel.app/login"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className={`inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
+                                            plan.featured
+                                                ? 'bg-zinc-900 text-white hover:bg-black shadow-sm hover:shadow-md focus-visible:ring-zinc-900'
+                                                : plan.type === 'lifetime'
+                                                    ? 'bg-amber-500 text-white hover:bg-amber-600 shadow-sm hover:shadow-md focus-visible:ring-amber-500'
+                                                    : 'border-2 border-zinc-300 text-zinc-900 hover:bg-zinc-50 hover:border-zinc-400 focus-visible:ring-zinc-900'
+                                        }`}
+                                    >
+                                        {plan.cta}
+                                    </a>
+                                    {plan.type === 'lifetime' && (
+                                        <p className="mt-3 text-center text-[11px] text-zinc-500">
+                                            Pagamento unico. Nessun rinnovo.
+                                        </p>
                                     )}
                                 </div>
                             </div>
-
-                            {/* Lista feature */}
-                            <ul className="mb-6 space-y-2.5">
-                                {plan.features.map((feature) => (
-                                    <li key={feature} className="flex items-start gap-2">
-                    <span className="mt-[2px] inline-flex h-4 w-4 items-center justify-center rounded-full bg-blue-100 text-[10px] text-primary-brand">
-                      ✓
-                    </span>
-                                        <span className="text-xs text-dark-gray-1">{feature}</span>
-                                    </li>
-                                ))}
-                            </ul>
-
-                            {/* CTA */}
-                            <a
-                                href="#signup"
-                                className={`inline-flex w-full items-center justify-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-150 ${
-                                    plan.featured
-                                        ? 'bg-primary-brand text-white hover:bg-[#0041CC]'
-                                        : 'border border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
-                                }`}
-                            >
-                                {plan.cta}
-                            </a>
                         </div>
                     ))}
                 </div>
 
-                {/* Info aggiuntive – stile sottile */}
-                <div className="mt-14 md:mt-16 text-center text-xs text-dark-gray-1">
-                    Nessun costo nascosto. I prezzi includono tutte le tasse applicabili.
+                {/* Info aggiuntive */}
+                <div className="mt-14 md:mt-16 space-y-6">
+                    {/* FAQ veloce */}
+                    <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 text-center md:text-left bg-white/70 backdrop-blur border border-zinc-200 rounded-2xl p-6 shadow-sm">
+                        <div className="space-y-2">
+                            <h4 className="text-sm font-semibold text-zinc-900">
+                                Cosa succede dopo il periodo Founder?
+                            </h4>
+                            <p className="text-xs text-zinc-600">
+                                Il Lifetime Founder sarà disponibile solo per i primi 200 utenti. Dopo, sarà disponibile solo la subscription Pro.
+                            </p>
+                        </div>
+                        <div className="space-y-2">
+                            <h4 className="text-sm font-semibold text-zinc-900">
+                                Posso passare da Lifetime a Pro?
+                            </h4>
+                            <p className="text-xs text-zinc-600">
+                                Sì! Gli utenti Lifetime possono fare upgrade a Pro in qualsiasi momento per accedere alle funzionalità AI.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="text-center text-xs text-zinc-500">
+                        Tutti i prezzi sono in Euro. IVA inclusa dove applicabile.
+                    </div>
                 </div>
             </div>
         </section>
