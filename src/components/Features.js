@@ -6,47 +6,56 @@ import { useState } from 'react';
 export default function Features() {
     const tabs = [
         {
-            id: 'accounts',
-            label: 'Accounts',
-            icon: '🏦',
+            id: 'ai',
+            label: 'Weisy AI',
+            icon: '✨',
             description:
-                'Collega tutti i tuoi conti in un unico posto per avere sempre una visione chiara del tuo denaro.',
+                'Chat in-app che risponde su holdings, conti e cash flow: net worth, top holdings e cash burn in tempo reale.',
             imageDesktop: '/images/features-accounts-desktop-2.png',
             imageMobile: '/images/features-accounts-mobile-2.png',
         },
         {
-            id: 'invest',
-            label: 'Invest',
-            icon: '📈',
+            id: 'holdings',
+            label: 'Holdings & Prezzi',
+            icon: '📊',
             description:
-                'Monitora i tuoi investimenti e scopri opportunità per far crescere il tuo patrimonio.',
+                'Ticker Yahoo Finance, P&L live e gain/loss% per azioni, ETF e crypto, con refresh rapido.',
             imageDesktop: '/images/features-invest-desktop-2.png',
             imageMobile: '/images/features-invest-mobile.png',
         },
         {
-            id: 'cash-flow',
-            label: 'Cash-flow',
-            icon: '💳',
+            id: 'accounts',
+            label: 'Accounts multi-valuta',
+            icon: '🏦',
             description:
-                'Gestisci entrate e uscite.',
-            imageDesktop: '/images/features-cash-desktop-2.png',
-            imageMobile: '/images/features-cash-mobile.png',
+                'Conti, broker ed exchange in EUR/USD/GBP con conversioni FX e viste consolidate.',
+            imageDesktop: '/images/features-accounts-desktop-2.png',
+            imageMobile: '/images/features-accounts-mobile-2.png',
         },
         {
             id: 'wealth-tracker',
             label: 'Wealth',
             icon: '💎',
             description:
-                'Visualizza l\'evoluzione del tuo patrimonio netto nel tempo e scopri quanto stai crescendo.',
+                'Snapshot patrimonio netto, storico, note e grafici per avere il quadro completo.',
             imageDesktop: '/images/features-wealth-desktop.png',
             imageMobile: '/images/features-wealth-mobile.png',
         },
         {
-            id: 'fire',
-            label: 'Fire',
-            icon: '🔥',
+            id: 'cash-flow',
+            label: 'Cash Flow',
+            icon: '💳',
             description:
-                'Calcola quando raggiungerai l\'indipendenza finanziaria e monitora i progressi verso la libertà economica.',
+                'Categorie, grafici e filtri entrate/uscite con transazioni rapide e cash burn.',
+            imageDesktop: '/images/features-cash-desktop-2.png',
+            imageMobile: '/images/features-cash-mobile.png',
+        },
+        {
+            id: 'monitoring',
+            label: 'Monitoring & Alert',
+            icon: '📢',
+            description:
+                'Top/worst performer, filtri avanzati, refresh prezzi/cambi e alert prezzo/FX (attivi o prossimamente).',
             imageDesktop: '/images/features-fire-desktop.png',
             imageMobile: '/images/features-fire-mobile.png',
         },
@@ -60,14 +69,14 @@ export default function Features() {
                 {/* Heading + tabs + testo */}
                 <div className="text-center mb-14 md:mb-16 space-y-6">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 bg-white/80 backdrop-blur text-xs font-semibold text-zinc-700">
-                        Nuove funzionalità Waly.app
+                        Funzionalità reali di Weisy
                     </div>
                     <div className="space-y-3">
                         <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900">
-                            Waly vede il quadro completo delle tue finanze.
+                            Weisy è il tuo wealth dashboard all-in-one.
                         </h2>
                         <p className="text-sm md:text-base text-zinc-600 max-w-2xl mx-auto">
-                            Seleziona un&apos;area per vedere come la dashboard gestisce budget, conti, investimenti e sicurezza con lo stesso linguaggio della landing.
+                            Seleziona un’area per vedere come Weisy unifica holdings, conti, cash flow e alert in un linguaggio chiaro e coerente con la dashboard.
                         </p>
                     </div>
 
@@ -138,7 +147,7 @@ export default function Features() {
                                     fill
                                     sizes="(min-width: 1024px) 900px, 100vw"
                                     className="object-cover"
-                                    priority={activeTab.id === 'budget'}
+                                    priority={activeTab.id === 'ai'}
                                 />
                             </div>
                         </div>
@@ -149,12 +158,12 @@ export default function Features() {
                                 <span className="phone-notch" aria-hidden="true" />
                                 <div className="relative h-full overflow-hidden rounded-[22px] bg-white">
                                     <Image
-                                        src={activeTab.imageMobile}
-                                        alt={`${activeTab.label} mobile`}
-                                        fill
-                                        sizes="(min-width: 1024px) 320px, 40vw"
-                                        className="object-cover"
-                                        priority={activeTab.id === 'budget'}
+                                    src={activeTab.imageMobile}
+                                    alt={`${activeTab.label} mobile`}
+                                    fill
+                                    sizes="(min-width: 1024px) 320px, 40vw"
+                                    className="object-cover"
+                                    priority={activeTab.id === 'ai'}
                                     />
                                 </div>
                             </div>

@@ -15,15 +15,14 @@ export default function FinalCTA() {
                                 Automazioni e insight
                             </div>
                             <h2 className="mb-4 text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight text-white">
-                                Fai di più — e ottieni risultati migliori — con <span className="font-semibold">Waly Smart</span>.
+                                Pronto a vedere tutti i tuoi numeri in un unico posto?
                             </h2>
                             <p className="max-w-md text-sm md:text-base text-white/85 mb-8">
-                                Waly Smart analizza automaticamente i tuoi investimenti e ti suggerisce
-                                come ottimizzare l&apos;allocazione per raggiungere i tuoi obiettivi finanziari.
+                                Onboarding guidato, tour interattivo e setup in meno di 5 minuti. Weisy Smart collega conti, holdings e cash flow e ti mostra subito cosa sta succedendo.
                             </p>
 
                             <div className="flex flex-wrap items-center gap-2 mb-6">
-                                {['AI live', 'Multi-valuta', 'Alert prezzo/FX', 'Export CSV/JSON'].map((chip) => (
+                                {['Weisy AI live', 'Multi-valuta EUR/USD/GBP', 'Supabase + RLS', 'Export CSV/JSON'].map((chip) => (
                                     <span
                                         key={chip}
                                         className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/5 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide"
@@ -36,7 +35,7 @@ export default function FinalCTA() {
 
                             <div className="flex flex-wrap items-center gap-3">
                                 <a
-                                    href="https://wealth-manager-gamma.vercel.app/login"
+                                    href="https://app.weisy.io/login"
                                     target="_blank"
                                     rel="noreferrer"
                                     className="inline-flex items-center justify-center rounded-full bg-white text-zinc-900 px-7 py-3 text-sm font-semibold shadow-sm hover:bg-zinc-100 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
@@ -65,8 +64,7 @@ export default function FinalCTA() {
                                 {/* Top message card */}
                                 <div className="rounded-2xl bg-white/12 border border-white/25 px-4 py-3 text-[11px] leading-snug shadow-sm">
                                     <p className="font-medium text-white">
-                                        L&apos;allocazione automatica di questo mese è stata completata,
-                                        ecco i tuoi saldi:
+                                        Allocazione completata: ecco i tuoi saldi consolidati e dove stai investendo.
                                     </p>
                                 </div>
 
@@ -89,9 +87,9 @@ export default function FinalCTA() {
                                             70%
                                         </div>
                                         <div className="flex-1 rounded-2xl bg-white/10 border border-white/25 px-4 py-3 flex items-center justify-between text-[11px]">
-                                            <div className="flex flex-col">
+                                        <div className="flex flex-col">
                                                 <span className="text-white/65 text-[10px]">Risparmio</span>
-                                                <span className="mt-1 font-medium">Waly Savings</span>
+                                                <span className="mt-1 font-medium">Weisy Savings</span>
                                             </div>
                                             <span className="font-medium">€8.848,20</span>
                                         </div>
@@ -103,9 +101,9 @@ export default function FinalCTA() {
                                             30%
                                         </div>
                                         <div className="flex-1 rounded-2xl bg-white/10 border border-white/25 px-4 py-3 flex items-center justify-between text-[11px]">
-                                            <div className="flex flex-col">
+                                        <div className="flex flex-col">
                                                 <span className="text-white/65 text-[10px]">Investimenti</span>
-                                                <span className="mt-1 font-medium">Waly Investing</span>
+                                                <span className="mt-1 font-medium">Weisy Investing</span>
                                             </div>
                                             <span className="font-medium">€665,12</span>
                                         </div>

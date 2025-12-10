@@ -71,7 +71,7 @@ export default function Navigation() {
                         {/* Logo */}
                         <a href="/" className="flex items-center gap-2">
                             <span className="text-xl font-semibold tracking-tight text-black dark:text-white">
-                                Waly
+                                Weisy
                             </span>
                         </a>
 
@@ -107,19 +107,19 @@ export default function Navigation() {
                         {/* Desktop CTA */}
                         <div className="hidden md:flex items-center justify-end flex-1 gap-3">
                             <a
-                                href="https://wealth-manager-gamma.vercel.app/login"
+                                href="https://app.weisy.io/login"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="inline-flex items-center rounded-full px-4 py-2.5 text-sm font-semibold text-zinc-900 border border-zinc-200 bg-white/80 backdrop-blur hover:bg-zinc-100 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:text-white dark:border-zinc-700 dark:bg-zinc-900/70 dark:hover:bg-zinc-800 dark:focus-visible:ring-white/30"
                             >
-                                Registrati
+                                Accedi / Registrati
                             </a>
 
                             <a
                                 href="#waitlist"
                                 className="inline-flex items-center rounded-full px-4 py-2.5 text-sm font-semibold bg-zinc-900 text-white hover:bg-black shadow-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 dark:focus-visible:ring-white/30"
                             >
-                                Entra in waitlist
+                                Inizia gratis
                             </a>
                         </div>
 

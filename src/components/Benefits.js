@@ -4,18 +4,18 @@ export default function Benefits() {
     const miniCards = [
         {
             icon: '📊',
-            title: 'Categorizzazione automatica',
-            text: 'La categorizzazione smart organizza automaticamente le tue transazioni.',
+            title: 'Cash burn chiaro',
+            text: 'Entrate/uscite e burn rate mensile in un linguaggio semplice, senza gergo tecnico.',
         },
         {
             icon: '🧠',
-            title: 'Monitora le spese',
-            text: 'Tieni sotto controllo le tue spese e il flusso di cassa mensile.',
+            title: 'Suggerimenti smart',
+            text: 'L’AI evidenzia dove ottimizzare il cash flow e ridurre le spese ricorrenti.',
         },
         {
             icon: '📅',
-            title: 'Traccia bollette e abbonamenti',
-            text: 'Rileviamo bollette e abbonamenti ricorrenti, aiutandoti a ridurli o cancellarli.',
+            title: 'Bollette e abbonamenti',
+            text: 'Rileviamo ricorrenze, alert per scadenze e ti aiutiamo a negoziare o disdire.',
         },
     ];
 
@@ -25,29 +25,28 @@ export default function Benefits() {
                 {/* Header */}
                 <div className="text-center max-w-3xl mx-auto space-y-4">
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-zinc-200 bg-white/80 backdrop-blur text-xs font-semibold text-zinc-700">
-                        Risparmio e controllo spese
+                        Cash flow e risparmio
                     </div>
                     <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900">
-                        Sapere dove vanno i tuoi <span className="text-primary-brand">soldi</span>
+                        Wealth made simple significa sapere dove vanno i tuoi <span className="text-primary-brand">soldi</span>
                     </h2>
                     <p className="text-sm md:text-base text-zinc-600">
-                        Monitora spese, flussi di cassa e bollette con lo stesso linguaggio della dashboard,
-                        così landing e prodotto restano coerenti.
+                        Weisy parla chiaro: monitora spese, flussi di cassa e bollette con lo stesso linguaggio della dashboard, così sai sempre quanto puoi spendere e dove ottimizzare.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                         <a
                             href="#features"
                             className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
                         >
-                            Scopri di più
+                            Scopri come funziona
                         </a>
                         <a
-                            href="https://wealth-manager-gamma.vercel.app/login"
+                            href="https://app.weisy.io/login"
                             target="_blank"
                             rel="noreferrer"
                             className="inline-flex w-full sm:w-auto items-center justify-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
                         >
-                            Prova Waly
+                            Prova Weisy
                         </a>
                     </div>
                 </div>

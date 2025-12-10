@@ -57,10 +57,10 @@ export default function Waitlist() {
                         </div>
                         <div className="space-y-3">
                             <h3 className="text-3xl md:text-4xl font-semibold text-zinc-900">
-                                Tutti i tuoi numeri, prima degli altri
+                                Wealth made simple, prima di tutti
                             </h3>
                             <p className="text-sm md:text-base text-zinc-600 max-w-3xl">
-                                Accesso early a holdings, conti, cash flow e AI sugli insight, con export CSV/JSON e connettori multi-valuta. Aggiornamenti essenziali, niente spam.
+                                Accesso early a holdings, conti, cash flow e AI sugli insight, con export CSV/JSON e connettori multi-valuta. Weisy ti avvisa solo quando serve, senza riempirti la casella di posta.
                             </p>
                         </div>
 
@@ -105,7 +105,7 @@ export default function Waitlist() {
                                 />
                             </label>
                             <p className="text-xs text-zinc-500">
-                                Confermando accetti di ricevere aggiornamenti su Waly. Potrai disiscriverti in ogni momento.
+                                Confermando accetti di ricevere aggiornamenti su Weisy. Potrai disiscriverti in ogni momento.
                             </p>
 
                             <button

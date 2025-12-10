@@ -37,12 +37,12 @@ export default function Footer() {
                         <div className="space-y-4">
                             <a href="#" className="inline-flex items-center gap-2">
                                 <span className="text-xl font-semibold tracking-tight text-zinc-900">
-                                    Waly
+                                    Weisy
                                 </span>
                             </a>
                             <p className="max-w-sm text-sm text-zinc-600">
-                                La piattaforma completa per tracciare investimenti, monitorare conti
-                                e far crescere il tuo patrimonio con semplicità.
+                                Wealth made simple: la dashboard unica per vedere, capire e far crescere
+                                investimenti, conti e cash flow in modo chiaro e accessibile.
                             </p>
                             <div className="flex items-center gap-3 pt-2">
                                 <a
@@ -90,7 +90,7 @@ export default function Footer() {
                 {/* Bottom row: copyright + legal + socials */}
                 <div className="py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-zinc-600 border-t border-zinc-200">
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                        <span>© {new Date().getFullYear()} Waly.</span>
+                        <span>© {new Date().getFullYear()} Weisy.</span>
                         <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-zinc-400" />
                         <span>All rights reserved.</span>
                     </div>

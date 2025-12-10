@@ -14,11 +14,11 @@ const sections = [
         content: [
             {
                 subtitle: '1.1 Definizioni',
-                text: 'Waly è una piattaforma digitale di monitoraggio e gestione patrimoniale personale che consente agli utenti di tracciare il proprio patrimonio netto, holdings finanziari, conti bancari, transazioni e obiettivi FIRE (Financial Independence, Retire Early). Il servizio è fornito "as-is" esclusivamente a scopo informativo e di organizzazione personale.'
+                text: 'Weisy è una piattaforma digitale di monitoraggio e gestione patrimoniale personale che consente agli utenti di tracciare il proprio patrimonio netto, holdings finanziari, conti bancari, transazioni e obiettivi FIRE (Financial Independence, Retire Early). Il servizio è fornito "as-is" esclusivamente a scopo informativo e di organizzazione personale.'
             },
             {
                 subtitle: '1.2 Accettazione dei Termini',
-                text: 'L\'accesso e l\'utilizzo di Waly implicano l\'accettazione integrale e incondizionata dei presenti Termini di Servizio. Se non si accettano questi termini, è necessario astenersi dall\'utilizzo della piattaforma.'
+                text: 'L\'accesso e l\'utilizzo di Weisy implicano l\'accettazione integrale e incondizionata dei presenti Termini di Servizio. Se non si accettano questi termini, è necessario astenersi dall\'utilizzo della piattaforma.'
             }
         ]
     },
@@ -29,15 +29,15 @@ const sections = [
         content: [
             {
                 subtitle: '2.1 Funzionalità Principali',
-                text: 'Waly offre le seguenti funzionalità: (a) Dashboard di monitoraggio patrimonio netto con grafici storici e KPI; (b) Gestione holdings finanziari (azioni, ETF, obbligazioni, criptovalute) con tracking P&L; (c) Gestione conti bancari e cash con supporto multi-valuta (EUR, USD, GBP); (d) Tracking transazioni di investimento (acquisto, vendita, dividendi); (e) Tracking cash flow (entrate, uscite, trasferimenti tra conti); (f) Snapshot mensili del patrimonio per analisi storica; (g) Analisi asset allocation e suggerimenti di ribilanciamento; (h) FIRE Tracker per monitorare il progresso verso l\'indipendenza finanziaria; (i) Aggiornamento prezzi di mercato in tempo reale tramite Yahoo Finance; (j) Integrazione opzionale con Interactive Brokers (IBKR) per sincronizzazione automatica posizioni.'
+                text: 'Weisy offre le seguenti funzionalità: (a) Dashboard di monitoraggio patrimonio netto con grafici storici e KPI; (b) Gestione holdings finanziari (azioni, ETF, obbligazioni, criptovalute) con tracking P&L; (c) Gestione conti bancari e cash con supporto multi-valuta (EUR, USD, GBP); (d) Tracking transazioni di investimento (acquisto, vendita, dividendi); (e) Tracking cash flow (entrate, uscite, trasferimenti tra conti); (f) Snapshot mensili del patrimonio per analisi storica; (g) Analisi asset allocation e suggerimenti di ribilanciamento; (h) FIRE Tracker per monitorare il progresso verso l\'indipendenza finanziaria; (i) Aggiornamento prezzi di mercato in tempo reale tramite Yahoo Finance; (j) Integrazione opzionale con Interactive Brokers (IBKR) per sincronizzazione automatica posizioni.'
             },
             {
                 subtitle: '2.2 Natura del Servizio',
-                text: 'Waly è uno strumento di organizzazione e visualizzazione dati. Non fornisce consulenza finanziaria, raccomandazioni di investimento, gestione patrimoniale professionale o servizi di intermediazione. Tutte le analisi, grafici e suggerimenti di ribilanciamento sono puramente informativi e non costituiscono sollecitazione all\'investimento.'
+                text: 'Weisy è uno strumento di organizzazione e visualizzazione dati. Non fornisce consulenza finanziaria, raccomandazioni di investimento, gestione patrimoniale professionale o servizi di intermediazione. Tutte le analisi, grafici e suggerimenti di ribilanciamento sono puramente informativi e non costituiscono sollecitazione all\'investimento.'
             },
             {
                 subtitle: '2.3 Limitazioni Tecniche',
-                text: 'I prezzi di mercato sono forniti da fonti esterne (Yahoo Finance, IBKR) e potrebbero non essere aggiornati in tempo reale o presentare ritardi o inesattezze. Waly non garantisce l\'accuratezza, completezza o tempestività dei dati di mercato. L\'utente è responsabile della verifica delle informazioni prima di prendere qualsiasi decisione finanziaria.'
+                text: 'I prezzi di mercato sono forniti da fonti esterne (Yahoo Finance, IBKR) e potrebbero non essere aggiornati in tempo reale o presentare ritardi o inesattezze. Weisy non garantisce l\'accuratezza, completezza o tempestività dei dati di mercato. L\'utente è responsabile della verifica delle informazioni prima di prendere qualsiasi decisione finanziaria.'
             }
         ]
     },
@@ -48,11 +48,11 @@ const sections = [
         content: [
             {
                 subtitle: '3.1 Creazione Account',
-                text: 'Per utilizzare Waly è necessario creare un account fornendo un indirizzo email valido e una password sicura. L\'utente dichiara di avere almeno 18 anni e di fornire informazioni veritiere, accurate e complete durante la registrazione e la profilazione.'
+                text: 'Per utilizzare Weisy è necessario creare un account fornendo un indirizzo email valido e una password sicura. L\'utente dichiara di avere almeno 18 anni e di fornire informazioni veritiere, accurate e complete durante la registrazione e la profilazione.'
             },
             {
                 subtitle: '3.2 Responsabilità Credenziali',
-                text: 'L\'utente è l\'unico responsabile della sicurezza delle proprie credenziali di accesso e di tutte le attività svolte tramite il proprio account. È vietato condividere le credenziali con terzi. In caso di accesso non autorizzato o sospetto, l\'utente deve notificare immediatamente Waly.'
+                text: 'L\'utente è l\'unico responsabile della sicurezza delle proprie credenziali di accesso e di tutte le attività svolte tramite il proprio account. È vietato condividere le credenziali con terzi. In caso di accesso non autorizzato o sospetto, l\'utente deve notificare immediatamente Weisy.'
             },
             {
                 subtitle: '3.3 Verifica Email',
@@ -60,7 +60,7 @@ const sections = [
             },
             {
                 subtitle: '3.4 Profilazione Utente',
-                text: 'Durante l\'onboarding, Waly raccoglie informazioni personali, preferenze di investimento e obiettivi finanziari per personalizzare l\'esperienza. L\'utente può aggiornare o modificare queste informazioni in qualsiasi momento dalla pagina Impostazioni.'
+                text: 'Durante l\'onboarding, Weisy raccoglie informazioni personali, preferenze di investimento e obiettivi finanziari per personalizzare l\'esperienza. L\'utente può aggiornare o modificare queste informazioni in qualsiasi momento dalla pagina Impostazioni.'
             }
         ]
     },
@@ -83,11 +83,11 @@ const sections = [
             },
             {
                 subtitle: '4.4 Integrazione IBKR',
-                text: 'Se l\'utente sceglie di integrare il proprio account Interactive Brokers, Waly accede ai dati di portafoglio tramite IBKR Web API utilizzando credenziali fornite dall\'utente. Waly non memorizza le credenziali IBKR. L\'integrazione è opzionale e può essere disattivata in qualsiasi momento.'
+                text: 'Se l\'utente sceglie di integrare il proprio account Interactive Brokers, Weisy accede ai dati di portafoglio tramite IBKR Web API utilizzando credenziali fornite dall\'utente. Weisy non memorizza le credenziali IBKR. L\'integrazione è opzionale e può essere disattivata in qualsiasi momento.'
             },
             {
                 subtitle: '4.5 Backup e Esportazione',
-                text: 'Waly implementa backup regolari dei dati utente. L\'utente può esportare i propri dati in formato PDF tramite la funzione di report disponibile nella dashboard.'
+                text: 'Weisy implementa backup regolari dei dati utente. L\'utente può esportare i propri dati in formato PDF tramite la funzione di report disponibile nella dashboard.'
             }
         ]
     },
@@ -98,15 +98,15 @@ const sections = [
         content: [
             {
                 subtitle: '5.1 Uso Consentito',
-                text: 'Waly può essere utilizzato esclusivamente per monitoraggio e organizzazione del proprio patrimonio personale. L\'utente si impegna a inserire dati veritieri e accurati.'
+                text: 'Weisy può essere utilizzato esclusivamente per monitoraggio e organizzazione del proprio patrimonio personale. L\'utente si impegna a inserire dati veritieri e accurati.'
             },
             {
                 subtitle: '5.2 Divieti',
-                text: 'È espressamente vietato: (a) utilizzare Waly per scopi commerciali senza autorizzazione; (b) tentare accessi non autorizzati a dati di altri utenti; (c) compromettere la sicurezza o integrità della piattaforma; (d) utilizzare bot, scraper o strumenti automatizzati non autorizzati; (e) violare leggi applicabili in materia di privacy, fiscale o finanziaria; (f) caricare contenuti illeciti, diffamatori o che violino diritti di terzi.'
+                text: 'È espressamente vietato: (a) utilizzare Weisy per scopi commerciali senza autorizzazione; (b) tentare accessi non autorizzati a dati di altri utenti; (c) compromettere la sicurezza o integrità della piattaforma; (d) utilizzare bot, scraper o strumenti automatizzati non autorizzati; (e) violare leggi applicabili in materia di privacy, fiscale o finanziaria; (f) caricare contenuti illeciti, diffamatori o che violino diritti di terzi.'
             },
             {
                 subtitle: '5.3 Monitoraggio e Moderazione',
-                text: 'Waly si riserva il diritto di monitorare l\'utilizzo della piattaforma e di sospendere o terminare account che violino i presenti Termini o la legge applicabile.'
+                text: 'Weisy si riserva il diritto di monitorare l\'utilizzo della piattaforma e di sospendere o terminare account che violino i presenti Termini o la legge applicabile.'
             }
         ]
     },
@@ -117,23 +117,23 @@ const sections = [
         content: [
             {
                 subtitle: '6.1 Nessuna Consulenza Finanziaria',
-                text: 'Waly non fornisce consulenza finanziaria, raccomandazioni di investimento o gestione patrimoniale. I suggerimenti di ribilanciamento e le analisi fornite sono puramente automatici e informativi. L\'utente è l\'unico responsabile delle proprie decisioni finanziarie e di investimento.'
+                text: 'Weisy non fornisce consulenza finanziaria, raccomandazioni di investimento o gestione patrimoniale. I suggerimenti di ribilanciamento e le analisi fornite sono puramente automatici e informativi. L\'utente è l\'unico responsabile delle proprie decisioni finanziarie e di investimento.'
             },
             {
                 subtitle: '6.2 Accuratezza Dati',
-                text: 'Waly non garantisce l\'accuratezza, completezza o tempestività dei prezzi di mercato, tassi di cambio o altri dati forniti da fonti esterne. I dati possono presentare ritardi, errori o interruzioni. L\'utente è responsabile della verifica delle informazioni.'
+                text: 'Weisy non garantisce l\'accuratezza, completezza o tempestività dei prezzi di mercato, tassi di cambio o altri dati forniti da fonti esterne. I dati possono presentare ritardi, errori o interruzioni. L\'utente è responsabile della verifica delle informazioni.'
             },
             {
                 subtitle: '6.3 Disponibilità del Servizio',
-                text: 'Waly è fornito "as-is" e "as-available". Non garantiamo la disponibilità continua, ininterrotta o priva di errori del servizio. Potrebbero verificarsi manutenzioni programmate, interruzioni tecniche o problemi di performance.'
+                text: 'Weisy è fornito "as-is" e "as-available". Non garantiamo la disponibilità continua, ininterrotta o priva di errori del servizio. Potrebbero verificarsi manutenzioni programmate, interruzioni tecniche o problemi di performance.'
             },
             {
                 subtitle: '6.4 Limitazione Responsabilità',
-                text: 'Nei limiti consentiti dalla legge applicabile, Waly non è responsabile per: (a) perdite finanziarie derivanti da decisioni di investimento prese dall\'utente; (b) danni diretti, indiretti, incidentali o consequenziali derivanti dall\'uso o impossibilità di uso della piattaforma; (c) perdita di dati, profitti o opportunità; (d) errori o inesattezze nei dati di mercato; (e) interruzioni del servizio o problemi tecnici.'
+                text: 'Nei limiti consentiti dalla legge applicabile, Weisy non è responsabile per: (a) perdite finanziarie derivanti da decisioni di investimento prese dall\'utente; (b) danni diretti, indiretti, incidentali o consequenziali derivanti dall\'uso o impossibilità di uso della piattaforma; (c) perdita di dati, profitti o opportunità; (d) errori o inesattezze nei dati di mercato; (e) interruzioni del servizio o problemi tecnici.'
             },
             {
                 subtitle: '6.5 Esclusione Garanzie',
-                text: 'Waly non fornisce garanzie esplicite o implicite di commerciabilità, idoneità per uno scopo specifico o non violazione. L\'utente utilizza il servizio a proprio rischio.'
+                text: 'Weisy non fornisce garanzie esplicite o implicite di commerciabilità, idoneità per uno scopo specifico o non violazione. L\'utente utilizza il servizio a proprio rischio.'
             }
         ]
     },
@@ -142,16 +142,16 @@ const sections = [
         id: 'proprieta',
         content: [
             {
-                subtitle: '7.1 Diritti di Waly',
-                text: 'Tutti i diritti di proprietà intellettuale relativi a Waly, inclusi design, codice sorgente, loghi, marchi, grafiche e documentazione, sono di proprietà esclusiva di Waly o dei suoi licenzianti. È vietata la riproduzione, modifica o distribuzione non autorizzata.'
+                subtitle: '7.1 Diritti di Weisy',
+                text: 'Tutti i diritti di proprietà intellettuale relativi a Weisy, inclusi design, codice sorgente, loghi, marchi, grafiche e documentazione, sono di proprietà esclusiva di Weisy o dei suoi licenzianti. È vietata la riproduzione, modifica o distribuzione non autorizzata.'
             },
             {
                 subtitle: '7.2 Licenza d\'Uso',
-                text: 'Waly concede all\'utente una licenza limitata, non esclusiva, non trasferibile e revocabile per utilizzare la piattaforma esclusivamente per scopi personali e non commerciali, in conformità con i presenti Termini.'
+                text: 'Weisy concede all\'utente una licenza limitata, non esclusiva, non trasferibile e revocabile per utilizzare la piattaforma esclusivamente per scopi personali e non commerciali, in conformità con i presenti Termini.'
             },
             {
                 subtitle: '7.3 Feedback e Suggerimenti',
-                text: 'Eventuali feedback, suggerimenti o proposte di miglioramento forniti dall\'utente possono essere utilizzati da Waly senza obbligo di compenso o riconoscimento.'
+                text: 'Eventuali feedback, suggerimenti o proposte di miglioramento forniti dall\'utente possono essere utilizzati da Weisy senza obbligo di compenso o riconoscimento.'
             }
         ]
     },
@@ -161,15 +161,15 @@ const sections = [
         content: [
             {
                 subtitle: '8.1 Modello Freemium',
-                text: 'Waly attualmente offre un piano gratuito con accesso a tutte le funzionalità base. Eventuali piani a pagamento (Premium, Pro) con funzionalità avanzate saranno indicati nella sezione Impostazioni > Abbonamento.'
+                text: 'Weisy attualmente offre un piano gratuito con accesso a tutte le funzionalità base. Eventuali piani a pagamento (Premium, Pro) con funzionalità avanzate saranno indicati nella sezione Impostazioni > Abbonamento.'
             },
             {
                 subtitle: '8.2 Modifiche ai Prezzi',
-                text: 'Waly si riserva il diritto di modificare i prezzi, le funzionalità incluse nei vari piani e i termini di abbonamento con preavviso di almeno 30 giorni. Gli utenti con abbonamento attivo manterranno le condizioni in vigore al momento della sottoscrizione fino alla scadenza del periodo pagato.'
+                text: 'Weisy si riserva il diritto di modificare i prezzi, le funzionalità incluse nei vari piani e i termini di abbonamento con preavviso di almeno 30 giorni. Gli utenti con abbonamento attivo manterranno le condizioni in vigore al momento della sottoscrizione fino alla scadenza del periodo pagato.'
             },
             {
                 subtitle: '8.3 Metodi di Pagamento',
-                text: 'I pagamenti saranno processati tramite provider esterni (Stripe, PayPal). Waly non memorizza direttamente i dati delle carte di credito.'
+                text: 'I pagamenti saranno processati tramite provider esterni (Stripe, PayPal). Weisy non memorizza direttamente i dati delle carte di credito.'
             },
             {
                 subtitle: '8.4 Cancellazione e Rimborsi',
@@ -183,11 +183,11 @@ const sections = [
         content: [
             {
                 subtitle: '9.1 Aggiornamenti e Modifiche',
-                text: 'Waly si riserva il diritto di modificare, aggiornare o interrompere funzionalità della piattaforma in qualsiasi momento, con o senza preavviso. Ci impegniamo a comunicare modifiche significative tramite email o notifiche in-app.'
+                text: 'Weisy si riserva il diritto di modificare, aggiornare o interrompere funzionalità della piattaforma in qualsiasi momento, con o senza preavviso. Ci impegniamo a comunicare modifiche significative tramite email o notifiche in-app.'
             },
             {
                 subtitle: '9.2 Sospensione Account',
-                text: 'Waly può sospendere o terminare l\'account dell\'utente in caso di violazione dei presenti Termini, attività sospette o per ordine di autorità competenti. In caso di sospensione, l\'utente può richiedere l\'esportazione dei propri dati entro 30 giorni.'
+                text: 'Weisy può sospendere o terminare l\'account dell\'utente in caso di violazione dei presenti Termini, attività sospette o per ordine di autorità competenti. In caso di sospensione, l\'utente può richiedere l\'esportazione dei propri dati entro 30 giorni.'
             },
             {
                 subtitle: '9.3 Cancellazione Account',
@@ -201,7 +201,7 @@ const sections = [
         content: [
             {
                 subtitle: '10.1 Aggiornamenti',
-                text: 'Waly può aggiornare i presenti Termini di Servizio in qualsiasi momento. Gli aggiornamenti saranno pubblicati su questa pagina con indicazione della data di "Ultimo aggiornamento".'
+                text: 'Weisy può aggiornare i presenti Termini di Servizio in qualsiasi momento. Gli aggiornamenti saranno pubblicati su questa pagina con indicazione della data di "Ultimo aggiornamento".'
             },
             {
                 subtitle: '10.2 Notifica',
@@ -209,7 +209,7 @@ const sections = [
             },
             {
                 subtitle: '10.3 Accettazione',
-                text: 'L\'uso continuato di Waly dopo l\'entrata in vigore delle modifiche implica l\'accettazione dei nuovi Termini. Se l\'utente non accetta le modifiche, deve interrompere l\'utilizzo del servizio e può richiedere la cancellazione dell\'account.'
+                text: 'L\'uso continuato di Weisy dopo l\'entrata in vigore delle modifiche implica l\'accettazione dei nuovi Termini. Se l\'utente non accetta le modifiche, deve interrompere l\'utilizzo del servizio e può richiedere la cancellazione dell\'account.'
             }
         ]
     },
@@ -223,7 +223,7 @@ const sections = [
             },
             {
                 subtitle: '11.2 Risoluzione Controversie',
-                text: 'Per qualsiasi controversia derivante dai presenti Termini o dall\'utilizzo di Waly, sarà competente in via esclusiva il Foro di [Città], salvo diversa previsione di legge inderogabile a tutela del consumatore.'
+                text: 'Per qualsiasi controversia derivante dai presenti Termini o dall\'utilizzo di Weisy, sarà competente in via esclusiva il Foro di [Città], salvo diversa previsione di legge inderogabile a tutela del consumatore.'
             },
             {
                 subtitle: '11.3 Clausola Salvatoria',
@@ -237,15 +237,15 @@ const sections = [
         content: [
             {
                 subtitle: '12.1 Supporto Clienti',
-                text: 'Per domande, richieste di supporto o segnalazioni, contattaci via email all\'indirizzo: support@waly.app. Ci impegniamo a rispondere entro 48 ore lavorative.'
+                text: 'Per domande, richieste di supporto o segnalazioni, contattaci via email all\'indirizzo: support@weisy.io. Ci impegniamo a rispondere entro 48 ore lavorative.'
             },
             {
                 subtitle: '12.2 Reclami e Segnalazioni',
-                text: 'Per segnalare violazioni dei Termini, problemi di sicurezza o comportamenti inappropriati, contatta: abuse@waly.app.'
+                text: 'Per segnalare violazioni dei Termini, problemi di sicurezza o comportamenti inappropriati, contatta: abuse@weisy.io.'
             },
             {
                 subtitle: '12.3 Richieste Legali',
-                text: 'Per richieste legali, ordini giudiziari o comunicazioni formali, contatta: legal@waly.app.'
+                text: 'Per richieste legali, ordini giudiziari o comunicazioni formali, contatta: legal@weisy.io.'
             }
         ]
     }
@@ -403,7 +403,7 @@ export default function TermsPage() {
                                     </div>
                                     <div className="space-y-1">
                                         <h2 className="text-2xl md:text-3xl font-bold text-zinc-900">
-                                            Benvenuto nei Termini di Servizio di Waly
+                                            Benvenuto nei Termini di Servizio di Weisy
                                         </h2>
                                         <p className="text-sm text-zinc-500">
                                             Ultimo aggiornamento: {lastUpdated}
@@ -413,10 +413,10 @@ export default function TermsPage() {
 
                                 <div className="space-y-4 text-sm text-zinc-700 leading-relaxed">
                                     <p>
-                                        Ti ringraziamo per aver scelto <span className="font-semibold text-zinc-900">Waly</span>, la piattaforma di monitoraggio e gestione patrimoniale personale.
+                                        Ti ringraziamo per aver scelto <span className="font-semibold text-zinc-900">Weisy</span>, la piattaforma di monitoraggio e gestione patrimoniale personale.
                                     </p>
                                     <p>
-                                        Questi Termini di Servizio (&quot;Termini&quot;) regolano l&apos;accesso e l&apos;utilizzo della piattaforma Waly e di tutti i servizi correlati. <span className="font-semibold text-zinc-900">L&apos;accesso o l&apos;utilizzo di Waly implica l&apos;accettazione integrale dei presenti Termini.</span> Se non accetti questi Termini, non potrai utilizzare il servizio.
+                                        Questi Termini di Servizio (&quot;Termini&quot;) regolano l&apos;accesso e l&apos;utilizzo della piattaforma Weisy e di tutti i servizi correlati. <span className="font-semibold text-zinc-900">L&apos;accesso o l&apos;utilizzo di Weisy implica l&apos;accettazione integrale dei presenti Termini.</span> Se non accetti questi Termini, non potrai utilizzare il servizio.
                                     </p>
                                     <p>
                                         Ti invitiamo a leggere attentamente tutte le sezioni. Per informazioni sul trattamento dei dati personali, consulta la nostra{' '}
@@ -520,7 +520,7 @@ export default function TermsPage() {
                                     </p>
                                 </div>
                                 <a
-                                    href="mailto:support@waly.app"
+                                    href="mailto:support@weisy.io"
                                     className="px-6 py-3 bg-white text-zinc-900 hover:bg-zinc-100 rounded-full font-medium text-sm transition-colors shadow-lg whitespace-nowrap"
                                 >
                                     Contatta il supporto

@@ -8,7 +8,7 @@ export default function Hero() {
             <div className="rotating-circle relative w-full h-full">
                 <Image
                     src="/introducing-waly-hero.webp"
-                    alt="Waly Background"
+                    alt="Weisy Background"
                     fill
                     priority
                     sizes="100vw"
@@ -23,30 +23,43 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto space-y-6">
           {/* Main Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight">
-                Gestisci il tuo <span className="text-primary-brand">patrimonio personale</span> in un&#39;unica dashboard
+                Controlla investimenti, conti e cash flow con insight AI in tempo reale
             </h1>
             <p className="text-xl md:text-2xl text-zinc-800 font-semibold">
-                Traccia investimenti, conti e obiettivi FIRE. Finalmente chiaro.
+                Weisy rende semplice ciò che è complesso: Wealth Made Simple.
             </p>
 
           {/* Subtitle */}
           <p className="max-w-2xl mx-auto text-base md:text-lg text-zinc-600">
-            La piattaforma completa per monitorare il tuo net worth, analizzare portafogli e raggiungere l&#39;indipendenza finanziaria.
+            Unifica holdings, transazioni e patrimonio netto in un’unica vista. L’assistente AI risponde sui tuoi dati e ti guida nelle decisioni quotidiane.
           </p>
+
+          {/* Badges */}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {['Weisy AI live', 'Multi-valuta EUR/USD/GBP', 'Privacy-first'].map((chip) => (
+                <span
+                    key={chip}
+                    className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-white/80 px-4 py-2 text-xs font-semibold text-zinc-700 shadow-sm"
+                >
+                  <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-zinc-900 text-white text-[10px]">•</span>
+                  {chip}
+                </span>
+            ))}
+          </div>
 
           {/* CTA Button */}
           <div className="flex items-center justify-center gap-3 pt-2">
             <a
-              href="#waitlist"
+              href="#pricing"
               className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
             >
-              Entra in waitlist
+              Inizia gratis
             </a>
             <a
               href="#features"
               className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
             >
-              Guarda come funziona
+              Guarda la demo
             </a>
           </div>
         </div>

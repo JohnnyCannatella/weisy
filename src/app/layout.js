@@ -12,21 +12,22 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Waly - Gestisci il tuo patrimonio personale | Dashboard investimenti e FIRE",
-  description: "Piattaforma completa per tracciare patrimonio personale, investimenti e obiettivi FIRE. Monitora net worth, conti bancari e portafogli in un'unica dashboard. Made in Italy.",
-  keywords: "gestione patrimonio personale, tracker investimenti Italia, FIRE Italia, calcolo patrimonio netto, net worth tracker, portafoglio investimenti, dashboard finanziaria, indipendenza finanziaria, monitoraggio conti bancari, wealth tracker italiano",
-  authors: [{ name: "Waly" }],
+  title: "Weisy - Wealth Made Simple | Dashboard patrimonio, investimenti e cash flow",
+  description: "The all-in-one wealth dashboard: Weisy unifica net worth, holdings, conti multi-valuta e cash flow con insight AI chiari e immediati.",
+  keywords: "Weisy, wealth dashboard, gestione patrimonio, tracker investimenti, cash flow, net worth, multi valuta, AI finance, monitoraggio conti, portfolio tracker",
+  authors: [{ name: "Weisy" }],
   openGraph: {
-    title: "Waly - Gestisci il tuo patrimonio personale",
-    description: "Monitora investimenti, conti e obiettivi FIRE in un'unica dashboard italiana",
+    title: "Weisy - Wealth Made Simple",
+    description: "Monitora investimenti, conti e cash flow in un'unica dashboard con AI",
     type: "website",
     locale: "it_IT",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Waly - Gestisci il tuo patrimonio personale",
-    description: "Monitora investimenti, conti e obiettivi FIRE in un'unica dashboard italiana",
+    title: "Weisy - Wealth Made Simple",
+    description: "Monitora investimenti, conti e cash flow in un'unica dashboard con AI",
   },
+  metadataBase: new URL("https://weisy.io"),
 };
 
 export default function RootLayout({ children }) {
@@ -35,7 +36,7 @@ export default function RootLayout({ children }) {
     "@graph": [
       {
         "@type": "SoftwareApplication",
-        "name": "Waly",
+        "name": "Weisy",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Web",
         "offers": {
@@ -50,21 +51,21 @@ export default function RootLayout({ children }) {
           "ratingValue": "4.8",
           "ratingCount": "127"
         },
-        "description": "Piattaforma completa per tracciare patrimonio personale, investimenti e obiettivi FIRE in Italia"
+        "description": "Piattaforma completa per tracciare patrimonio personale, investimenti e cash flow con insight AI"
       },
       {
         "@type": "Organization",
-        "name": "Waly",
-        "url": "https://waly.app",
-        "logo": "https://waly.app/logo.png",
-        "description": "Piattaforma italiana per la gestione del patrimonio personale",
+        "name": "Weisy",
+        "url": "https://weisy.io",
+        "logo": "https://weisy.io/logo.png",
+        "description": "Piattaforma per la gestione del patrimonio personale e degli investimenti",
         "sameAs": []
       },
       {
         "@type": "WebSite",
-        "url": "https://waly.app",
-        "name": "Waly",
-        "description": "Gestisci il tuo patrimonio personale in un'unica dashboard",
+        "url": "https://weisy.io",
+        "name": "Weisy",
+        "description": "Gestisci il tuo patrimonio personale in un'unica dashboard con AI",
         "inLanguage": "it-IT"
       }
     ]

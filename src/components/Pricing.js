@@ -12,6 +12,7 @@ export default function Pricing() {
             price: '€0',
             period: '',
             description: 'Perfetto per iniziare a tracciare le tue finanze.',
+            savings: null,
             features: [
                 'Fino a 5 holdings',
                 '2 conti bancari',
@@ -20,6 +21,7 @@ export default function Pricing() {
                 'Export CSV',
             ],
             cta: 'Inizia gratis',
+            ctaHref: '#signup',
             featured: false,
             type: 'free',
         },
@@ -49,14 +51,15 @@ export default function Pricing() {
                 'No integrazioni automatiche',
             ],
             cta: 'Accesso lifetime',
+            ctaHref: '#signup',
             featured: false,
             type: 'lifetime',
         }] : []),
         {
             name: 'Pro',
-            price: isAnnual ? '€99' : '€9.99',
+            price: isAnnual ? '€109' : '€9.99',
             period: isAnnual ? '/anno' : '/mese',
-            savings: isAnnual ? 'Risparmi €20/anno' : null,
+            savings: isAnnual ? '2 mesi inclusi (risparmi ~€20)' : 'Prova gratuita 7 giorni inclusa',
             description: 'Tutto il potere dell\'AI e funzionalità future.',
             badge: 'PIÙ POPOLARE',
             features: [
@@ -70,6 +73,8 @@ export default function Pricing() {
                 'Supporto prioritario',
             ],
             cta: 'Inizia ora',
+            ctaHref: '#signup',
+            trialNote: 'Prova gratuita 7 giorni, poi puoi tornare a Free se non continui.',
             featured: true,
             type: 'subscription',
         },
@@ -113,10 +118,13 @@ export default function Pricing() {
                     </span>
                     {isAnnual && (
                         <span className="inline-flex items-center rounded-full bg-green-100 px-2.5 py-1 text-xs font-semibold text-green-800">
-                            Risparmi €20
+                            2 mesi inclusi
                         </span>
                     )}
                 </div>
+                <p className="text-xs text-zinc-600 text-center mb-6">
+                    Pro include una prova gratuita di 7 giorni. L&apos;annualità evidenzia il risparmio (circa 2 mesi inclusi) e riduce i rinnovi mensili.
+                </p>
 
                 {/* Pricing cards */}
                 <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
@@ -241,7 +249,7 @@ export default function Pricing() {
 
                                 <div className="mt-auto">
                                     <a
-                                        href="https://wealth-manager-gamma.vercel.app/login"
+                                        href={plan.ctaHref || '#signup'}
                                         target="_blank"
                                         rel="noreferrer"
                                         className={`inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
@@ -254,6 +262,11 @@ export default function Pricing() {
                                     >
                                         {plan.cta}
                                     </a>
+                                    {plan.trialNote && (
+                                        <p className="mt-3 text-center text-[11px] text-zinc-600">
+                                            {plan.trialNote}
+                                        </p>
+                                    )}
                                     {plan.type === 'lifetime' && (
                                         <p className="mt-3 text-center text-[11px] text-zinc-500">
                                             Pagamento unico. Nessun rinnovo.
