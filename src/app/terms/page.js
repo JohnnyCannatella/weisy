@@ -296,11 +296,11 @@ export default function TermsPage() {
     }
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-100">
+        <div className="min-h-screen bg-gradient-to-b from-zinc-50 via-white to-zinc-100 pt-24 md:pt-28 pb-16">
             <Navigation />
             {/* Header */}
-            <header className="sticky top-16 md:top-20 z-40 bg-white/90 backdrop-blur-lg border-b border-zinc-200">
-                <div className="max-w-[1600px] mx-auto px-6 py-5 flex items-center justify-between">
+            <header className="sticky top-[84px] md:top-[92px] z-40 bg-white/90 backdrop-blur-lg border-b border-zinc-200 shadow-sm">
+                <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
                     <div className="flex items-center gap-3">
                         <div className="w-10 h-10 rounded-2xl bg-zinc-900 text-white flex items-center justify-center text-lg font-bold shadow-sm">
                             W
@@ -333,11 +333,11 @@ export default function TermsPage() {
             </header>
 
             {/* Main Layout */}
-            <div className="max-w-[1600px] mx-auto px-6 py-12">
-                <div className="flex gap-8">
+            <div className="max-w-6xl mx-auto px-6 py-12">
+                <div className="flex gap-6 lg:gap-8">
                     {/* Sidebar - Desktop */}
                     <aside className="hidden lg:block w-72 flex-shrink-0">
-                        <div className="sticky top-28">
+                        <div className="sticky top-[140px]">
                             <div className="bg-white rounded-3xl shadow-sm border border-zinc-200 p-6">
                                 <h2 className="text-sm font-semibold text-zinc-900 mb-4 uppercase tracking-wide">
                                     Indice
@@ -364,7 +364,7 @@ export default function TermsPage() {
                     {/* Mobile Sidebar */}
                     {isMobileMenuOpen && (
                         <div className="lg:hidden fixed inset-0 z-40 bg-black/50" onClick={() => setIsMobileMenuOpen(false)}>
-                            <div className="absolute left-0 top-20 bottom-0 w-80 max-w-[85vw] bg-white shadow-xl overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+                            <div className="absolute left-0 top-[88px] bottom-0 w-80 max-w-[85vw] bg-white shadow-xl overflow-y-auto" onClick={(e) => e.stopPropagation()}>
                                 <div className="p-6">
                                     <h2 className="text-sm font-semibold text-zinc-900 mb-4 uppercase tracking-wide">
                                         Indice
@@ -411,7 +411,7 @@ export default function TermsPage() {
                                     </div>
                                 </div>
 
-                                <div className="space-y-4 text-sm text-zinc-700 leading-relaxed">
+                                <div className="space-y-4 text-sm md:text-base text-zinc-700 leading-relaxed">
                                     <p>
                                         Ti ringraziamo per aver scelto <span className="font-semibold text-zinc-900">Weisy</span>, la piattaforma di monitoraggio e gestione patrimoniale personale.
                                     </p>
@@ -421,7 +421,7 @@ export default function TermsPage() {
                                     <p>
                                         Ti invitiamo a leggere attentamente tutte le sezioni. Per informazioni sul trattamento dei dati personali, consulta la nostra{' '}
                                         <a
-                                            href="https://www.iubenda.com/privacy-policy"
+                                            href="https://www.iubenda.com/privacy-policy/35020938"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-blue-600 hover:text-blue-700 font-medium underline"
@@ -430,7 +430,7 @@ export default function TermsPage() {
                                         </a>{' '}
                                         e la{' '}
                                         <a
-                                            href="https://www.iubenda.com/privacy-policy/cookie-policy"
+                                            href="https://www.iubenda.com/privacy-policy/35020938/cookie-policy"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-blue-600 hover:text-blue-700 font-medium underline"
@@ -471,7 +471,7 @@ export default function TermsPage() {
                                                 <h3 className="text-base font-semibold text-zinc-900">
                                                     {item.subtitle}
                                                 </h3>
-                                                <p className="text-sm text-zinc-700 leading-relaxed">
+                                                <p className="text-sm md:text-base text-zinc-700 leading-relaxed">
                                                     {item.text}
                                                 </p>
                                             </div>
@@ -524,6 +524,32 @@ export default function TermsPage() {
                                     className="px-6 py-3 bg-white text-zinc-900 hover:bg-zinc-100 rounded-full font-medium text-sm transition-colors shadow-lg whitespace-nowrap"
                                 >
                                     Contatta il supporto
+                                </a>
+                            </div>
+                        </div>
+
+                        {/* Return links */}
+                        <div className="mt-6 bg-white rounded-3xl shadow-sm border border-zinc-200 p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                            <div className="space-y-1">
+                                <p className="text-sm font-semibold text-zinc-900">
+                                    Torna alla home o approfondisci la privacy
+                                </p>
+                                <p className="text-sm text-zinc-600">
+                                    Puoi continuare a navigare dal footer o scriverci se hai altri dubbi.
+                                </p>
+                            </div>
+                            <div className="flex flex-wrap items-center gap-3">
+                                <Link
+                                    href="/"
+                                    className="inline-flex items-center rounded-full bg-zinc-900 text-white px-4 py-2.5 text-sm font-semibold hover:bg-black transition-colors"
+                                >
+                                    Torna alla home
+                                </Link>
+                                <a
+                                    href="/privacy"
+                                    className="inline-flex items-center rounded-full border border-zinc-200 px-4 py-2.5 text-sm font-semibold text-zinc-900 hover:bg-zinc-50 transition-colors"
+                                >
+                                    Privacy Policy
                                 </a>
                             </div>
                         </div>

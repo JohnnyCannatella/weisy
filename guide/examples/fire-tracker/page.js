@@ -1,7 +1,7 @@
 // app/fire-tracker/page.js
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/src/contexts/AuthContext'
 import AppHeader from '@/src/components/header/AppHeader'
@@ -78,25 +78,7 @@ export default function FireTracker() {
         }
     }, [user, authLoading, router])
 
-    useEffect(() => {
-        if (user) {
-            loadData()
-
-            if (profile) {
-                setSettings({
-                    fire_target: profile.fire_target || 2000000,
-                    withdrawal_rate: ((profile.withdrawal_rate || 0.04) * 100),
-                    monthly_contribution: profile.monthly_contribution || 3000,
-                    expected_return: profile.expected_return || 7.0,
-                    monthly_expenses: profile.monthly_expenses || 3000,
-                    current_monthly_income: profile.current_monthly_income || 5000,
-                    coast_fire_age: profile.coast_fire_age || 65,
-                })
-            }
-        }
-    }, [user, profile])
-
-    const loadData = async () => {
+    const loadData = useCallback(async () => {
         try {
             const rates = await getLatestExchangeRate()
             setExchangeRates(rates)
@@ -118,7 +100,25 @@ export default function FireTracker() {
         } finally {
             setLoading(false)
         }
-    }
+    }, [user])
+
+    useEffect(() => {
+        if (user) {
+            loadData()
+
+            if (profile) {
+                setSettings({
+                    fire_target: profile.fire_target || 2000000,
+                    withdrawal_rate: ((profile.withdrawal_rate || 0.04) * 100),
+                    monthly_contribution: profile.monthly_contribution || 3000,
+                    expected_return: profile.expected_return || 7.0,
+                    monthly_expenses: profile.monthly_expenses || 3000,
+                    current_monthly_income: profile.current_monthly_income || 5000,
+                    coast_fire_age: profile.coast_fire_age || 65,
+                })
+            }
+        }
+    }, [user, profile, loadData])
 
     const saveSettings = async () => {
         try {

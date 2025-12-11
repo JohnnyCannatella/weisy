@@ -11,14 +11,14 @@ export default function Pricing() {
             name: 'Free',
             price: '€0',
             period: '',
-            description: 'Perfetto per iniziare a tracciare le tue finanze.',
+            description: 'Parti con holdings e conti monitorati in modo chiaro.',
             savings: null,
             features: [
-                'Fino a 5 holdings',
-                '2 conti bancari',
-                'Dashboard base',
-                'Net worth tracking',
-                'Export CSV',
+                'Fino a 5 holdings con prezzi live',
+                '2 conti bancari multi-valuta',
+                'Dashboard base holdings + cash flow',
+                'Snapshot patrimonio netto',
+                'Export CSV/JSON base',
             ],
             cta: 'Inizia gratis',
             ctaHref: '#signup',
@@ -31,23 +31,23 @@ export default function Pricing() {
             price: '€149',
             period: '',
             originalPrice: '€299',
-            description: 'Accesso permanente alle funzionalità core.',
+            description: 'Accesso permanente alle funzionalità core e supporto founder.',
             badge: 'EARLY BIRD',
             limitedOffer: lifetimeStatus.message,
             spotsRemaining: lifetimeStatus.remaining,
             urgencyLevel: lifetimeStatus.urgencyLevel,
             features: [
-                'Holdings illimitati',
-                'Conti illimitati',
-                'FIRE tracker',
-                'Cash flow analysis',
-                'Dashboard avanzata',
-                'Export PDF',
-                'Bug fixes e sicurezza lifetime',
+                'Holdings illimitati con prezzi live',
+                'Conti illimitati multi-valuta',
+                'FIRE tracker e storico patrimonio',
+                'Cash flow analysis e budget',
+                'Dashboard avanzata e report',
+                'Export PDF + CSV/JSON',
+                'Bug fixes e sicurezza lifetime garantiti',
             ],
             excludedFeatures: [
-                'No AI insights',
-                'No future features',
+                'Nessun AI insights',
+                'Niente feature avanzate future',
                 'No integrazioni automatiche',
             ],
             cta: 'Accesso lifetime',
@@ -60,21 +60,22 @@ export default function Pricing() {
             price: isAnnual ? '€109' : '€9.99',
             period: isAnnual ? '/anno' : '/mese',
             savings: isAnnual ? '2 mesi inclusi (risparmi ~€20)' : 'Prova gratuita 7 giorni inclusa',
-            description: 'Tutto il potere dell\'AI e funzionalità future.',
+            description: 'AI, automazioni e tutto ciò che arriverà.',
             badge: 'PIÙ POPOLARE',
             features: [
                 'Tutto in Lifetime',
-                '✨ AI insights e previsioni',
-                '✨ Automazione cash flow',
+                '✨ Weisy AI su holdings, conti e cash flow',
+                '✨ Previsioni e alert intelligenti',
+                '✨ Automazione cash flow e riconciliazioni',
                 '✨ Integrazioni bancarie auto',
                 '✨ Rebalancing intelligente',
-                'Tutte le future features',
+                'Tutte le feature future incluse',
                 'Analytics avanzate AI-powered',
                 'Supporto prioritario',
             ],
             cta: 'Inizia ora',
             ctaHref: '#signup',
-            trialNote: 'Prova gratuita 7 giorni, poi puoi tornare a Free se non continui.',
+            trialNote: 'Prova gratuita 7 giorni, poi puoi tornare a Free quando vuoi.',
             featured: true,
             type: 'subscription',
         },
@@ -92,7 +93,7 @@ export default function Pricing() {
                         Scegli il piano giusto per il tuo denaro.
                     </h2>
                     <p className="text-sm md:text-base text-zinc-600">
-                        Inizia gratis o blocca il prezzo founder. Tutti i piani parlano lo stesso linguaggio della dashboard.
+                        Prova gratis, blocca il prezzo founder o passa al Pro con AI: i piani parlano lo stesso linguaggio della dashboard.
                     </p>
                 </div>
 
@@ -123,7 +124,7 @@ export default function Pricing() {
                     )}
                 </div>
                 <p className="text-xs text-zinc-600 text-center mb-6">
-                    Pro include una prova gratuita di 7 giorni. L&apos;annualità evidenzia il risparmio (circa 2 mesi inclusi) e riduce i rinnovi mensili.
+                    Pro include una prova gratuita di 7 giorni. L&apos;annualità evidenzia il risparmio (~2 mesi inclusi) e riduce i rinnovi mensili.
                 </p>
 
                 {/* Pricing cards */}

@@ -94,7 +94,7 @@ export default function AppHeader({
                 <div className="h-16 flex items-center justify-between gap-6">
                     {/* Logo / Brand */}
                     <div className="flex items-center gap-2">
-                        <span  className={`text-2xl font-semibold tracking-tight transition-colors duration-300 text-black`}>Waly</span>
+                        <span  className={`text-2xl font-semibold tracking-tight transition-colors duration-300 text-black`}>Weisy</span>
                     </div>
 
                     {/* Navigation - Center */}

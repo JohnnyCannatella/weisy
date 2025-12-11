@@ -7,9 +7,9 @@ export default function Waitlist() {
     const [status, setStatus] = useState('idle'); // idle | loading | success | error
     const [message, setMessage] = useState('');
     const stats = [
-        { label: 'Roadmap aperta', value: 'Aggiornamenti weekly' },
+        { label: 'Prezzi e cambi live', value: 'Ticker Yahoo Finance' },
+        { label: 'Supabase + RLS', value: 'Privacy-first' },
         { label: 'Tour guidato', value: '< 5 minuti' },
-        { label: 'Privacy-first', value: 'Supabase + RLS' },
     ];
 
     const handleSubmit = async (event) => {
@@ -57,10 +57,10 @@ export default function Waitlist() {
                         </div>
                         <div className="space-y-3">
                             <h3 className="text-3xl md:text-4xl font-semibold text-zinc-900">
-                                Wealth made simple, prima di tutti
+                                Wealth made simple con Weisy AI, prima di tutti
                             </h3>
                             <p className="text-sm md:text-base text-zinc-600 max-w-3xl">
-                                Accesso early a holdings, conti, cash flow e AI sugli insight, con export CSV/JSON e connettori multi-valuta. Weisy ti avvisa solo quando serve, senza riempirti la casella di posta.
+                                Accesso early a Weisy AI, holdings, conti multi-valuta, cash flow e monitoring/alert. Export CSV/JSON, connettori EUR/USD/GBP e notifiche solo quando servono.
                             </p>
                         </div>
 
@@ -86,13 +86,13 @@ export default function Waitlist() {
                                 Perché registrarti
                             </p>
                             <ul className="space-y-2 text-sm text-zinc-600">
-                                <li>• Priorità di accesso alla beta e tour guidato</li>
-                                <li>• Aggiornamenti su roadmap e nuovi connettori</li>
-                                <li>• Feedback loop diretto con il team</li>
+                                <li>• Priorità su Weisy AI, alert prezzo/FX e monitoring</li>
+                                <li>• Aggiornamenti su roadmap, prezzi/cambi live e nuovi connettori</li>
+                                <li>• Feedback diretto con il team e tour dedicato</li>
                             </ul>
                         </div>
 
-                        <form onSubmit={handleSubmit} className="rounded-2xl bg-white border border-zinc-200 shadow-sm p-6 space-y-4">
+                        <form id="signup" onSubmit={handleSubmit} className="rounded-2xl bg-white border border-zinc-200 shadow-sm p-6 space-y-4">
                             <label className="block text-sm font-semibold text-zinc-900">
                                 Email di contatto
                                 <input

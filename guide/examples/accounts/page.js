@@ -1,7 +1,7 @@
 // app/accounts/page.js
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/src/contexts/AuthContext'
 import AppHeader from '@/src/components/header/AppHeader'
@@ -65,13 +65,7 @@ export default function AccountsPage() {
         }
     }, [user, authLoading, router])
 
-    useEffect(() => {
-        if (user) {
-            loadData()
-        }
-    }, [user])
-
-    const loadData = async () => {
+    const loadData = useCallback(async () => {
         try {
             const rates = await getLatestExchangeRate()
             setExchangeRates(rates)
@@ -84,7 +78,13 @@ export default function AccountsPage() {
         } finally {
             setLoading(false)
         }
-    }
+    }, [user])
+
+    useEffect(() => {
+        if (user) {
+            loadData()
+        }
+    }, [user, loadData])
 
     const handleSubmit = async (e) => {
         e.preventDefault()

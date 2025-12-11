@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,26 +12,55 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://weisy.io";
+const ogImage = `${siteUrl}/introducing-waly-hero.webp`;
+const isStaging = process.env.NEXT_PUBLIC_ENV === "staging";
+
 export const metadata = {
   title: "Weisy - Wealth Made Simple | Dashboard patrimonio, investimenti e cash flow",
   description: "The all-in-one wealth dashboard: Weisy unifica net worth, holdings, conti multi-valuta e cash flow con insight AI chiari e immediati.",
-  keywords: "Weisy, wealth dashboard, gestione patrimonio, tracker investimenti, cash flow, net worth, multi valuta, AI finance, monitoraggio conti, portfolio tracker",
+  keywords: "Weisy, Weisy AI, wealth dashboard, gestione patrimonio, tracker investimenti, cash flow, net worth, multi valuta, AI finance, monitoraggio conti, portfolio tracker",
   authors: [{ name: "Weisy" }],
+  metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: siteUrl,
+  },
   openGraph: {
     title: "Weisy - Wealth Made Simple",
     description: "Monitora investimenti, conti e cash flow in un'unica dashboard con AI",
     type: "website",
     locale: "it_IT",
+    url: siteUrl,
+    images: [
+      {
+        url: ogImage,
+        width: 1200,
+        height: 630,
+        alt: "Weisy - Wealth Made Simple",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Weisy - Wealth Made Simple",
     description: "Monitora investimenti, conti e cash flow in un'unica dashboard con AI",
+    images: [ogImage],
   },
-  metadataBase: new URL("https://weisy.io"),
+  robots: isStaging
+    ? {
+        index: false,
+        follow: false,
+        nocache: true,
+      }
+    : {
+        index: true,
+        follow: true,
+      },
 };
 
 export default function RootLayout({ children }) {
+  const iubendaSiteId = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
+  const iubendaWidgetSrc = "https://embeds.iubenda.com/widgets/3bf6d818-9bb0-4148-8dcc-6124dd3b149e.js";
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
     "@graph": [
@@ -74,15 +104,56 @@ export default function RootLayout({ children }) {
   return (
     <html lang="it" className="scroll-smooth">
       <head>
-        <script
+        <Script
+          id="weisy-ld-json"
           type="application/ld+json"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+      {children}
+      {iubendaSiteId ? (
+        <>
+          <Script
+            id="iubenda-cs-config"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{
+              __html: `
+                var _iub = _iub || [];
+                _iub.csConfiguration = {
+                  siteId: ${iubendaSiteId},
+                  cookiePolicyId: 35020938,
+                  lang: 'it',
+                  consentOnContinuedBrowsing: false,
+                  banner: {
+                    position: "bottom",
+                    acceptButtonDisplay: true,
+                    customizeButtonDisplay: true,
+                    rejectButtonDisplay: true,
+                    closeButtonRejects: true
+                  }
+                };`,
+            }}
+          />
+          <Script
+            src="https://cdn.iubenda.com/cs/iubenda_cs.js"
+            strategy="afterInteractive"
+          />
+        </>
+      ) : (
+        <Script
+          src={iubendaWidgetSrc}
+          strategy="afterInteractive"
+        />
+      )}
+      <Script
+        src="https://cdn.iubenda.com/iubenda.js"
+        strategy="afterInteractive"
+        data-iubenda="true"
+      />
       </body>
     </html>
   );

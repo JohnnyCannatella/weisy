@@ -1,20 +1,20 @@
+const InstagramIcon = () => (
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+        <path d="M16.5 7.5h.01" />
+        <circle cx="12" cy="12" r="4" />
+    </svg>
+);
+
+const LinkedinIcon = () => (
+    <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+    </svg>
+);
+
 export default function Footer() {
-    const InstagramIcon = () => (
-        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
-            <path d="M16.5 7.5h.01" />
-            <circle cx="12" cy="12" r="4" />
-        </svg>
-    );
-
-    const LinkedinIcon = () => (
-        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-14h4v2" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-        </svg>
-    );
-
     const footerSections = [
         {
             title: 'Product',
@@ -24,7 +24,15 @@ export default function Footer() {
                 { label: 'Waitlist', href: '#waitlist' },
                 { label: 'Roadmap', href: '/roadmap' },
             ],
-        }
+        },
+        {
+            title: 'Legal',
+            links: [
+                { label: 'Termini e condizioni', href: '/terms' },
+                { label: 'Privacy', href: 'https://www.iubenda.com/privacy-policy/35020938' },
+                { label: 'Cookie Policy', href: 'https://www.iubenda.com/privacy-policy/35020938/cookie-policy', external: true },
+            ],
+        },
     ];
 
     return (
@@ -41,8 +49,7 @@ export default function Footer() {
                                 </span>
                             </a>
                             <p className="max-w-sm text-sm text-zinc-600">
-                                Wealth made simple: la dashboard unica per vedere, capire e far crescere
-                                investimenti, conti e cash flow in modo chiaro e accessibile.
+                                Controlla investimenti, conti e cash flow con Weisy AI: prezzi live, cash flow chiaro e alert mirati in un’unica dashboard.
                             </p>
                             <div className="flex items-center gap-3 pt-2">
                                 <a
@@ -74,6 +81,7 @@ export default function Footer() {
                                             <li key={link.label}>
                                                 <a
                                                     href={link.href}
+                                                    {...(link.external ? { target: '_blank', rel: 'noreferrer' } : {})}
                                                     className="text-zinc-600 hover:text-zinc-900 transition-colors"
                                                 >
                                                     {link.label}
@@ -100,13 +108,23 @@ export default function Footer() {
                             href="/terms"
                             className="hover:text-zinc-900 transition-colors"
                         >
-                            Termini di servizio
+                            Termini e condizioni
                         </a>
                         <a
                             href="/privacy"
+                            target="_blank"
+                            rel="noreferrer"
                             className="hover:text-zinc-900 transition-colors"
                         >
                             Privacy
+                        </a>
+                        <a
+                            href="https://www.iubenda.com/privacy-policy/35020938/cookie-policy"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:text-zinc-900 transition-colors"
+                        >
+                            Cookie Policy
                         </a>
                     </div>
 

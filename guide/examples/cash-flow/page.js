@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuth } from '@/src/contexts/AuthContext'
 import AppHeader from '@/src/components/header/AppHeader'
@@ -54,13 +54,7 @@ export default function CashFlowPage() {
         }
     }, [user, authLoading, router])
 
-    useEffect(() => {
-        if (user) {
-            loadData()
-        }
-    }, [user, dateRange, filterAccount, filterCategory, filterType])
-
-    const loadData = async () => {
+    const loadData = useCallback(async () => {
         try {
             setLoading(true)
             const accountsData = await db.getAccounts(user.id)
@@ -84,7 +78,13 @@ export default function CashFlowPage() {
         } finally {
             setLoading(false)
         }
-    }
+    }, [user, dateRange.start, dateRange.end, filterAccount, filterCategory, filterType])
+
+    useEffect(() => {
+        if (user) {
+            loadData()
+        }
+    }, [user, loadData])
 
     const handleSubmit = async (e) => {
         e.preventDefault()

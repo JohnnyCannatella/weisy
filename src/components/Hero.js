@@ -8,11 +8,11 @@ export default function Hero() {
             <div className="rotating-circle relative w-full h-full">
                 <Image
                     src="/introducing-waly-hero.webp"
-                    alt="Weisy Background"
+                    alt="Weisy background"
                     fill
                     priority
                     sizes="100vw"
-                    className="object-contain scale-170 md:scale-150"
+                    className="object-contain scale-[1.7] md:scale-[1.5]"
                     style={{ transformOrigin: 'center' }}
                 />
             </div>
@@ -25,13 +25,13 @@ export default function Hero() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight">
                 Controlla investimenti, conti e cash flow con insight AI in tempo reale
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-800 font-semibold">
-                Weisy rende semplice ciò che è complesso: Wealth Made Simple.
-            </p>
+            <h2 className="text-xl md:text-2xl text-zinc-800 font-semibold">
+                Weisy unifica holdings, transazioni e patrimonio netto in un’unica vista.
+            </h2>
 
           {/* Subtitle */}
           <p className="max-w-2xl mx-auto text-base md:text-lg text-zinc-600">
-            Unifica holdings, transazioni e patrimonio netto in un’unica vista. L’assistente AI risponde sui tuoi dati e ti guida nelle decisioni quotidiane.
+            L’assistente AI risponde sui tuoi dati (net worth, cash burn, top holdings) e ti guida nelle decisioni quotidiane, in multi-valuta e con approccio privacy-first.
           </p>
 
           {/* Badges */}

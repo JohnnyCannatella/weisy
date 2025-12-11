@@ -10,7 +10,7 @@ export default function Features() {
             label: 'Weisy AI',
             icon: '✨',
             description:
-                'Chat in-app che risponde su holdings, conti e cash flow: net worth, top holdings e cash burn in tempo reale.',
+                'Chat in-app che risponde sui tuoi dati (net worth, top holdings, cash burn) e ti suggerisce le azioni successive.',
             imageDesktop: '/images/features-accounts-desktop-2.png',
             imageMobile: '/images/features-accounts-mobile-2.png',
         },
@@ -19,7 +19,7 @@ export default function Features() {
             label: 'Holdings & Prezzi',
             icon: '📊',
             description:
-                'Ticker Yahoo Finance, P&L live e gain/loss% per azioni, ETF e crypto, con refresh rapido.',
+                'Prezzi e cambi live da Yahoo Finance, P&L in tempo reale e gain/loss% per azioni, ETF e crypto.',
             imageDesktop: '/images/features-invest-desktop-2.png',
             imageMobile: '/images/features-invest-mobile.png',
         },
@@ -28,16 +28,16 @@ export default function Features() {
             label: 'Accounts multi-valuta',
             icon: '🏦',
             description:
-                'Conti, broker ed exchange in EUR/USD/GBP con conversioni FX e viste consolidate.',
+                'Conti, broker ed exchange in EUR/USD/GBP con conversioni FX e viste consolidate per portafoglio e istituto.',
             imageDesktop: '/images/features-accounts-desktop-2.png',
             imageMobile: '/images/features-accounts-mobile-2.png',
         },
         {
             id: 'wealth-tracker',
-            label: 'Wealth',
+            label: 'Wealth Tracker',
             icon: '💎',
             description:
-                'Snapshot patrimonio netto, storico, note e grafici per avere il quadro completo.',
+                'Snapshot del patrimonio netto, storico, note e grafici coerenti con la dashboard.',
             imageDesktop: '/images/features-wealth-desktop.png',
             imageMobile: '/images/features-wealth-mobile.png',
         },
@@ -46,7 +46,7 @@ export default function Features() {
             label: 'Cash Flow',
             icon: '💳',
             description:
-                'Categorie, grafici e filtri entrate/uscite con transazioni rapide e cash burn.',
+                'Categorie, ricorrenze, grafici e filtri entrate/uscite con transazioni rapide e cash burn sempre aggiornato.',
             imageDesktop: '/images/features-cash-desktop-2.png',
             imageMobile: '/images/features-cash-mobile.png',
         },
@@ -73,10 +73,10 @@ export default function Features() {
                     </div>
                     <div className="space-y-3">
                         <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900">
-                            Weisy è il tuo wealth dashboard all-in-one.
+                            Weisy è la dashboard unica per holdings, conti e cash flow.
                         </h2>
                         <p className="text-sm md:text-base text-zinc-600 max-w-2xl mx-auto">
-                            Seleziona un’area per vedere come Weisy unifica holdings, conti, cash flow e alert in un linguaggio chiaro e coerente con la dashboard.
+                            Scopri come Weisy unifica investimenti, conti multi-valuta, cash flow e alert in un linguaggio chiaro e coerente con la dashboard.
                         </p>
                     </div>
 

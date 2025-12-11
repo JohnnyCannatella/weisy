@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { twMerge } from "tailwind-merge"
 import { clsx } from "clsx"
 import { usePathname } from "next/navigation";
@@ -14,7 +15,6 @@ export default function Navigation() {
 
     const navLinks = [
         { href: isHome ? '#features' : '/#features', label: 'Funzionalità', badge: 'Nuove' },
-        { href: isHome ? '#benefits' : '/#benefits', label: 'Vantaggi' },
         { href: isHome ? '#pricing' : '/#pricing', label: 'Prezzi' },
         { href: isHome ? '#waitlist' : '/#waitlist', label: 'Waitlist' },
         { href: '/roadmap', label: 'Roadmap' },
@@ -69,11 +69,15 @@ export default function Navigation() {
                         }`}
                     >
                         {/* Logo */}
-                        <a href="/" className="flex items-center gap-2">
-                            <span className="text-xl font-semibold tracking-tight text-black dark:text-white">
+                        <Link href="/" className="flex items-center gap-2" aria-label="Weisy home">
+                            <span
+                                className={`text-xl font-semibold tracking-tight transition-colors ${
+                                    scrolled ? 'text-black dark:text-white' : 'text-zinc-900 dark:text-black'
+                                }`}
+                            >
                                 Weisy
                             </span>
-                        </a>
+                        </Link>
 
                         {/* Desktop navigation */}
                         <div className="hidden md:flex flex-1 items-center justify-center">
