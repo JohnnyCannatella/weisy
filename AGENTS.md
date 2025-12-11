@@ -21,14 +21,21 @@
 - Keep imports absolute from `@/` (configured via `jsconfig.json`) for app-level modules.
 
 ## Layout, Design e SEO per i Componenti
+- Brand: usa sempre il nome Weisy (non Waly) in copy e metadata.
 - `Navigation` — navbar fissa con blur e shadow on scroll; highlight del link via hash per facilitare UX e anchor SEO. Mantieni CTA “Registrati/Accedi” e aria-label sui toggle mobili.
-- `Hero` — sezione full-height con background rotante `/introducing-Weisy-hero.webp`; doppio `h2` per claim. Mantieni alt descrittivo e CTA primaria a `#pricing`; evitare più di un `h1` nella pagina.
+- `Hero` — sezione full-height con background rotante `/introducing-waly-hero.webp`; doppio `h2` per claim. Mantieni alt descrittivo e CTA primaria a `#pricing`; evitare più di un `h1` nella pagina.
 - `Features` — tab interattivi (stateful) con immagini desktop/mobile; ID `#features` per ancore. Aggiorna `imageDesktop/mobile` con asset compressi e alt parlante; CTA “Scopri di più” punta a risorse correlate.
 - `Benefits` — card principale con callout flottanti e mini-cards. Usa testo breve e parole chiave (“risparmio”, “bollette”) per SEO semantico. Controlla contrasto nelle card blur.
 - `Pricing` — tre card con badge “PIÙ POPOLARE”. Mantieni heading con keyword “piano”/“prezzi”; CTA link a `#signup`. Se aggiungi toggle mensile/annuale, conserva gli ID per deep-link.
 - `Stats` — numeri con copy sociale e CTA finale; se aggiorni valori, mantieni formati consistenti (es. `200K+`). Radial background decorativo, assicurarsi che il testo resti leggibile.
 - `FinalCTA` — gradiento blu con copy su Weisy Smart, CTA testuale. Evita testo troppo lungo in `h2` per mantenere hierarchy chiara; pulsanti con testo descrittivo migliorano la scansione.
 - `Footer` — colonne linkate con ancore; aggiorna copyright dinamico. Assicurati che i link abbiano titoli coerenti e non vuoti; aggiungi `rel` adeguato per link esterni.
+
+## SEO / Indexing
+- Canonical esplicito in `src/app/layout.js` (`alternates.canonical` + `metadataBase` su `https://weisy.io`), `openGraph.url` e OG/Twitter image configurati (usa asset in `public/`, es. `/introducing-waly-hero.webp` o `/og-weisy.png` se aggiunto).
+- Sitemap servita da `src/app/sitemap.js` → `https://weisy.io/sitemap.xml`; mantieni aggiornata se aggiungi nuove pagine.
+- Robots: default `index/follow`; se mai crei uno staging, setta `NEXT_PUBLIC_ENV=staging` (o robots dedicato) per `noindex/nofollow`.
+- Dopo deploy, registra dominio e sitemap in Google Search Console; assicurati che il `robots.txt` in `public/` rifletta il dominio corretto.
 
 ## Testing Guidelines
 - No automated tests exist yet; add coverage when changing logic-heavy components.
