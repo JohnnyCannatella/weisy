@@ -13,17 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = "https://weisy.io";
+const metadataBase = new URL(siteUrl);
 const ogImage = `${siteUrl}/introducing-waly-hero.webp`;
 const isStaging = process.env.NEXT_PUBLIC_ENV === "staging";
+const googleVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION;
 
 export const metadata = {
   title: "Weisy - Wealth Made Simple | Dashboard patrimonio, investimenti e cash flow",
   description: "The all-in-one wealth dashboard: Weisy unifica net worth, holdings, conti multi-valuta e cash flow con insight AI chiari e immediati.",
   keywords: "Weisy, Weisy AI, wealth dashboard, gestione patrimonio, tracker investimenti, cash flow, net worth, multi valuta, AI finance, monitoraggio conti, portfolio tracker",
   authors: [{ name: "Weisy" }],
-  metadataBase: new URL(siteUrl),
+  metadataBase,
   alternates: {
     canonical: siteUrl,
+    languages: {
+      "x-default": siteUrl,
+      "it-IT": siteUrl,
+      "en-US": `${siteUrl}/en`,
+    },
   },
   openGraph: {
     title: "Weisy - Wealth Made Simple",
@@ -46,6 +53,11 @@ export const metadata = {
     description: "Monitora investimenti, conti e cash flow in un'unica dashboard con AI",
     images: [ogImage],
   },
+  verification: googleVerification
+    ? {
+        google: googleVerification,
+      }
+    : undefined,
   robots: isStaging
     ? {
         index: false,

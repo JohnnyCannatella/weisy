@@ -111,7 +111,7 @@ export default function Footer() {
                             Termini e condizioni
                         </a>
                         <a
-                            href="/privacy"
+                            href="https://www.iubenda.com/privacy-policy/35020938"
                             target="_blank"
                             rel="noreferrer"
                             className="hover:text-zinc-900 transition-colors"
