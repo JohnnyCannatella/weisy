@@ -57,7 +57,7 @@ export default function Pricing() {
         }] : []),
         {
             name: 'Pro',
-            price: isAnnual ? '€109' : '€9.99',
+            price: isAnnual ? '€119' : '€11.99',
             period: isAnnual ? '/anno' : '/mese',
             savings: isAnnual ? '2 mesi inclusi (risparmi ~€20)' : 'Prova gratuita 7 giorni inclusa',
             description: 'AI, automazioni e tutto ciò che arriverà.',
