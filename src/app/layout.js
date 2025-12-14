@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -113,12 +114,12 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrgJSONLD) }}
         />
       </head>
-      <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-      {children}
-      {iubendaSiteId ? (
-        <>
+	      <body
+	          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+	      >
+	      {children}
+	      {iubendaSiteId ? (
+	        <>
           <Script
             id="iubenda-cs-config"
             strategy="afterInteractive"
@@ -151,12 +152,13 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
       )}
-      <Script
-        src="https://cdn.iubenda.com/iubenda.js"
-        strategy="afterInteractive"
-        data-iubenda="true"
-      />
-      </body>
-    </html>
-  );
-}
+	      <Script
+	        src="https://cdn.iubenda.com/iubenda.js"
+	        strategy="afterInteractive"
+	        data-iubenda="true"
+	      />
+	      <Analytics />
+	      </body>
+	    </html>
+	  );
+	}
