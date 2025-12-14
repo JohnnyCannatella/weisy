@@ -4,6 +4,9 @@ export const metadata = {
     "Percorso di lancio, sicurezza e prossime funzionalità di Weisy.",
 };
 
+import Link from "next/link";
+import Navigation from "@/components/Navigation";
+
 const roadmapSections = [
   {
     title: "Checklist iniziale",
@@ -33,8 +36,6 @@ const roadmapSections = [
     ],
   },
 ];
-
-import Navigation from "@/components/Navigation";
 
 export default function RoadmapPage() {
   return (
@@ -101,4 +102,3 @@ export default function RoadmapPage() {
     </div>
   );
 }
-import Link from "next/link";

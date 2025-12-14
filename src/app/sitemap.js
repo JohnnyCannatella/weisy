@@ -9,22 +9,16 @@ export default function sitemap() {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#features`,
+      url: `${baseUrl}/roadmap`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.6,
     },
     {
-      url: `${baseUrl}/#pricing`,
+      url: `${baseUrl}/parla-con-noi`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#waitlist`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      changeFrequency: 'monthly',
+      priority: 0.4,
     },
     {
       url: `${baseUrl}/terms`,

@@ -3,8 +3,10 @@ export const metadata = {
   description: "Mettiti in contatto con il team Weisy.",
 };
 
-const CONTACT_EMAIL = "j.cannatella95@gmail.com";
+import Link from "next/link";
 import Navigation from "@/components/Navigation";
+
+const CONTACT_EMAIL = "j.cannatella95@gmail.com";
 
 export default function ParlaConNoiPage() {
   return (
@@ -60,4 +62,3 @@ export default function ParlaConNoiPage() {
     </div>
   );
 }
-import Link from "next/link";

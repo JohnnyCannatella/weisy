@@ -251,8 +251,9 @@ export default function Pricing() {
                                 <div className="mt-auto">
                                     <a
                                         href={plan.ctaHref || '#signup'}
-                                        target="_blank"
-                                        rel="noreferrer"
+                                        {...(plan.ctaHref?.startsWith('http')
+                                          ? { target: '_blank', rel: 'noreferrer' }
+                                          : {})}
                                         className={`inline-flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 ${
                                             plan.featured
                                                 ? 'bg-zinc-900 text-white hover:bg-black shadow-sm hover:shadow-md focus-visible:ring-zinc-900'

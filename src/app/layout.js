@@ -29,7 +29,6 @@ export const metadata = {
     languages: {
       "x-default": siteUrl,
       "it-IT": siteUrl,
-      "en-US": `${siteUrl}/en`,
     },
   },
   openGraph: {
@@ -81,25 +80,13 @@ export default function RootLayout({ children }) {
         "name": "Weisy",
         "applicationCategory": "FinanceApplication",
         "operatingSystem": "Web",
-        "offers": {
-          "@type": "AggregateOffer",
-          "priceCurrency": "EUR",
-          "lowPrice": "0",
-          "highPrice": "149",
-          "offerCount": "3"
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "ratingCount": "127"
-        },
         "description": "Piattaforma completa per tracciare patrimonio personale, investimenti e cash flow con insight AI"
       },
       {
         "@type": "Organization",
         "name": "Weisy",
         "url": "https://weisy.io",
-        "logo": "https://weisy.io/logo.png",
+        "logo": "https://weisy.io/logo.svg",
         "description": "Piattaforma per la gestione del patrimonio personale e degli investimenti",
         "sameAs": []
       },
