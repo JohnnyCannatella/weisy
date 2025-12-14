@@ -59,7 +59,7 @@ export default function Hero() {
               href="#features"
               className="inline-flex items-center justify-center rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-900 hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
             >
-              Guarda la demo
+              Scopri le funzionalità
             </a>
           </div>
         </div>

@@ -72,6 +72,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const iubendaSiteId = process.env.NEXT_PUBLIC_IUBENDA_SITE_ID;
   const iubendaWidgetSrc = "https://embeds.iubenda.com/widgets/3bf6d818-9bb0-4148-8dcc-6124dd3b149e.js";
+  const sameAsProfiles = [
+    "https://www.instagram.com/_johnnycannatella?igsh=OGNjYW9obW1hZmw0&utm_source=qr",
+  ];
   const schemaOrgJSONLD = {
     "@context": "https://schema.org",
     "@graph": [
@@ -88,7 +91,7 @@ export default function RootLayout({ children }) {
         "url": "https://weisy.io",
         "logo": "https://weisy.io/logo.svg",
         "description": "Piattaforma per la gestione del patrimonio personale e degli investimenti",
-        "sameAs": []
+        "sameAs": sameAsProfiles
       },
       {
         "@type": "WebSite",

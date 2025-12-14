@@ -1,5 +1,19 @@
 import Link from "next/link";
 
+const SOCIALS = [
+    {
+        label: 'Instagram',
+        href: 'https://www.instagram.com/_johnnycannatella?igsh=OGNjYW9obW1hZmw0&utm_source=qr',
+        icon: (
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                <path d="M16.5 7.5h.01" />
+                <circle cx="12" cy="12" r="4" />
+            </svg>
+        ),
+    },
+];
+
 export default function Footer() {
     const footerSections = [
         {
@@ -41,6 +55,22 @@ export default function Footer() {
                             <p className="max-w-sm text-sm text-zinc-600">
                                 Controlla investimenti, conti e cash flow con Weisy AI: prezzi live, cash flow chiaro e alert mirati in un’unica dashboard.
                             </p>
+                            {SOCIALS.length > 0 && (
+                                <div className="flex items-center gap-3 pt-2">
+                                    {SOCIALS.map((social) => (
+                                        <a
+                                            key={social.label}
+                                            href={social.href}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            aria-label={social.label}
+                                            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 hover:text-zinc-900 hover:border-zinc-300 transition-colors"
+                                        >
+                                            {social.icon}
+                                        </a>
+                                    ))}
+                                </div>
+                            )}
                         </div>
 
                         {/* Link columns */}
@@ -93,13 +123,13 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Bottom row: copyright + legal + socials */}
-                    <div className="py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-zinc-600 border-t border-zinc-200">
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-                        <span>© {new Date().getFullYear()} Weisy.</span>
-                        <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-zinc-400" />
-                        <span>All rights reserved.</span>
-                    </div>
+	                {/* Bottom row: copyright + legal + socials */}
+	                <div className="py-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-xs text-zinc-600 border-t border-zinc-200">
+	                    <div className="flex flex-col sm:flex-row sm:items-center gap-3">
+	                        <span>© {new Date().getFullYear()} Weisy.</span>
+	                        <span className="hidden sm:inline-block h-1 w-1 rounded-full bg-zinc-400" />
+	                        <span>All rights reserved.</span>
+	                    </div>
 
                     <div className="flex items-center gap-4">
                         <Link
@@ -116,17 +146,33 @@ export default function Footer() {
                         >
                             Privacy
                         </a>
-                        <a
-                            href="https://www.iubenda.com/privacy-policy/35020938/cookie-policy"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="hover:text-zinc-900 transition-colors"
-                        >
-                            Cookie Policy
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+	                        <a
+	                            href="https://www.iubenda.com/privacy-policy/35020938/cookie-policy"
+	                            target="_blank"
+	                            rel="noreferrer"
+	                            className="hover:text-zinc-900 transition-colors"
+	                        >
+	                            Cookie Policy
+	                        </a>
+	                    </div>
+                        {SOCIALS.length > 0 && (
+                            <div className="flex items-center gap-3 sm:hidden">
+                                {SOCIALS.map((social) => (
+                                    <a
+                                        key={social.label}
+                                        href={social.href}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        aria-label={social.label}
+                                        className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 hover:text-zinc-900 hover:border-zinc-300 transition-colors"
+                                    >
+                                        {social.icon}
+                                    </a>
+                                ))}
+                            </div>
+                        )}
+	                </div>
+	            </div>
+	        </footer>
+	    );
 }
