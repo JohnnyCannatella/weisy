@@ -20,19 +20,14 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container-albert relative z-10 text-center">
-        <div className="max-w-4xl mx-auto space-y-6">
-          {/* Main Headline */}
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight">
-                Controlla investimenti, conti e cash flow con insight AI in tempo reale
-            </h1>
-            <h2 className="text-xl md:text-2xl text-zinc-800 font-semibold">
-                Weisy unifica holdings, transazioni e patrimonio netto in un’unica vista.
-            </h2>
-
-          {/* Subtitle */}
-          <p className="max-w-2xl mx-auto text-base md:text-lg text-zinc-600">
-            L’assistente AI risponde sui tuoi dati (net worth, cash burn, top holdings) e ti guida nelle decisioni quotidiane, in multi-valuta e con approccio privacy-first.
-          </p>
+	        <div className="max-w-4xl mx-auto space-y-6">
+	          {/* Main Headline */}
+	            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-zinc-900 leading-tight">
+	                Tutto il tuo patrimonio, in un unico posto.
+	            </h1>
+	            <h2 className="text-xl md:text-xl text-zinc-500 font-medium leading-snug">
+	                Weisy unifica investimenti, conti e spese e usa l’AI per aiutarti a prendere decisioni consapevoli sui tuoi dati (net worth, cash burn, top holdings) e ti guida nelle decisioni quotidiane
+	            </h2>
 
           {/* Badges */}
           <div className="flex flex-wrap items-center justify-center gap-2">
