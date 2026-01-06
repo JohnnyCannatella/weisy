@@ -22,7 +22,7 @@ export default function ParlaConNoiPage() {
             Siamo qui per aiutarti
           </h1>
           <p className="text-sm md:text-base text-zinc-600">
-            Invia una mail e ti risponderemo al più presto con dettagli su waitlist, roadmap e prodotti in arrivo.
+            Invia una mail e ti risponderemo al più presto con dettagli su newsletter, roadmap e prodotti in arrivo.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function ParlaConNoiPage() {
           <div className="space-y-1">
             <p className="text-sm font-semibold text-zinc-900">Preferisci registrarti?</p>
             <p className="text-sm text-zinc-600">
-              Vai direttamente alla waitlist per ricevere gli update sul lancio.
+              Vai direttamente alla newsletter per ricevere gli update sul lancio.
             </p>
           </div>
           <Link

@@ -50,12 +50,12 @@ export async function POST(request) {
 
     return NextResponse.json({
       ok: true,
-      message: "Aggiunto alla waitlist.",
+      message: "Aggiunto alla newsletter.",
     });
   } catch (error) {
-    console.error("Waitlist API error", error);
+    console.error("Newsletter API error", error);
     return NextResponse.json(
-      { error: error.message || "Errore interno, riprova più tardi." },
+      { error: "Errore interno, riprova più tardi." },
       { status: 500 }
     );
   }

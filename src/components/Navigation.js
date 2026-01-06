@@ -16,7 +16,7 @@ export default function Navigation() {
     const navLinks = [
         { href: isHome ? '#features' : '/#features', label: 'Funzionalità', badge: 'Nuove' },
         { href: isHome ? '#pricing' : '/#pricing', label: 'Prezzi' },
-        { href: isHome ? '#waitlist' : '/#waitlist', label: 'Waitlist' },
+        { href: isHome ? '#newsletter' : '/#newsletter', label: 'Newsletter' },
         { href: '/roadmap', label: 'Roadmap' },
     ];
     function cn(...inputs) {
@@ -109,21 +109,22 @@ export default function Navigation() {
                         </div>
 
                         {/* Desktop CTA */}
-                        <div className="hidden md:flex items-center justify-end flex-1 gap-3">
+                        <div className="hidden md:flex items-center justify-end flex-1 gap-2">
                             <a
                                 href="https://app.weisy.io/login"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="inline-flex items-center rounded-full px-4 py-2.5 text-sm font-semibold text-zinc-900 border border-zinc-200 bg-white/80 backdrop-blur hover:bg-zinc-100 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:text-white dark:border-zinc-700 dark:bg-zinc-900/70 dark:hover:bg-zinc-800 dark:focus-visible:ring-white/30"
                             >
-                                Accedi / Registrati
+                                Accedi
                             </a>
-
                             <a
-                                href="#waitlist"
+                                href="https://app.weisy.io/login"
+                                target="_blank"
+                                rel="noreferrer"
                                 className="inline-flex items-center rounded-full px-4 py-2.5 text-sm font-semibold bg-zinc-900 text-white hover:bg-black shadow-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 dark:focus-visible:ring-white/30"
                             >
-                                Inizia gratis
+                                Registrati
                             </a>
                         </div>
 
@@ -181,14 +182,24 @@ export default function Navigation() {
                             ))}
                         </nav>
 
-                        <div className="h-px bg-zinc-200 dark:bg-zinc-800 my-3" />
-
                         <a
-                            href="#pricing"
-                            className="inline-flex w-full items-center justify-center rounded-full bg-zinc-900 text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 dark:focus-visible:ring-white/30"
+                            href="https://app.weisy.io/login"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 inline-flex w-full items-center justify-center rounded-full border border-zinc-200 bg-white/90 px-5 py-3 text-sm font-semibold text-zinc-900 shadow-sm hover:bg-zinc-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-white dark:hover:bg-zinc-800 dark:focus-visible:ring-white/30"
                             onClick={() => setMobileMenuOpen(false)}
                         >
-                            Inizia gratis
+                            Accedi
+                        </a>
+
+                        <a
+                            href="https://app.weisy.io/login"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-zinc-900 text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100 dark:focus-visible:ring-white/30"
+                            onClick={() => setMobileMenuOpen(false)}
+                        >
+                            Registrati
                         </a>
                     </div>
                 </div>

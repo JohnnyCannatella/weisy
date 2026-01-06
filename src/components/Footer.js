@@ -21,7 +21,7 @@ export default function Footer() {
             links: [
                 { label: 'Funzionalità', href: '#features' },
                 { label: 'Prezzi', href: '#pricing' },
-                { label: 'Waitlist', href: '#waitlist' },
+                { label: 'Newsletter', href: '#newsletter' },
                 { label: 'Roadmap', href: '/roadmap' },
                 { label: 'Parla con noi', href: '/parla-con-noi' },
             ],

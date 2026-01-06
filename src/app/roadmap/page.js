@@ -96,15 +96,15 @@ export default function RoadmapPage() {
               Vuoi aggiornamenti sullo stato?
             </p>
             <p className="text-sm text-zinc-600">
-              Iscriviti alla waitlist per ricevere il changelog mensile e le date
+              Iscriviti alla newsletter per ricevere il changelog mensile e le date
               dei prossimi rilasci.
             </p>
           </div>
           <Link
-            href="/#waitlist"
+            href="/#newsletter"
             className="inline-flex items-center justify-center rounded-full bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900/20"
           >
-            Vai alla waitlist
+            Vai alla newsletter
           </Link>
         </div>
       </div>

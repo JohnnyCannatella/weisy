@@ -2,7 +2,7 @@ import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Pricing from '@/components/Pricing';
-import Waitlist from '@/components/Waitlist';
+import Newsletter from '@/components/Newsletter';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Pricing />
-      <Waitlist />
+      <Newsletter />
       <Footer />
     </div>
   );
